@@ -39,10 +39,6 @@ class PaymentsCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.contentView.addSubview(cellView)
-        self.contentView.addSubview(cellViewInside)
-        self.contentView.addSubview(imageView)
-        self.contentView.addSubview(nameLabel)
     }
     
     required init?(coder: NSCoder) {

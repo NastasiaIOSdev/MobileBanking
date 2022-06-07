@@ -20,6 +20,8 @@ final class MainViewController: UIViewController {
     private enum Constant {
         static let imageGreting = "carbon_user-avatar-filled"
         static let plusButtonImage = "add-plus"
+        static let numberOfSections = 2
+        static let numberOfItemsInSection = 1
         static let hetghtSectionCellPayments: CGFloat = 76
         static let heightSectionCellCard: CGFloat = 180
         static let paymetsCelloffset: CGFloat = 16
@@ -144,13 +146,13 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return Constant.numberOfSections
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
             return paymentsDataArray.count
         }
-        return 1
+        return Constant.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -172,6 +174,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Нажата ячейка под номером \(indexPath.row)")
+        print("Нажата ячейка под индексом - \(indexPath.row)")
     }
 }
