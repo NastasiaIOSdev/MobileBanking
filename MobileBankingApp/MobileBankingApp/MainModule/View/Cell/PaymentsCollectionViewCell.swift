@@ -8,5 +8,116 @@
 import UIKit
 
 class PaymentsCollectionViewCell: UICollectionViewCell {
+    
     static let identifier = "PaymentsCollectionViewCell"
+    
+    private enum Constants {
+        static let viewCornerRadius: CGFloat = 10
+        static let labelScaleFactor: CGFloat = 0.5
+        static let numberOfLines: CGFloat = 2
+        static let heightImageView = 24
+    }
+    
+    private enum Constraints {
+        static let cellViewInsideInset = 5
+        static let nameLabelTopOffset = 6
+    }
+    
+    private let cellView = UIView()
+    private let cellViewInside = UIView()
+    private let imageView = UIImageView()
+    private let nameLabel = UILabel()
+    
+    var cell: PaymentsCellModel? {
+        didSet {
+            nameLabel.text = cell?.name
+            if let image = cell?.image {
+                imageView.image = UIImage(named: image)
+            }
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.contentView.addSubview(cellView)
+        self.contentView.addSubview(cellViewInside)
+        self.contentView.addSubview(imageView)
+        self.contentView.addSubview(nameLabel)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.setupUI()
+    }
+}
+
+private extension PaymentsCollectionViewCell {
+    func setupUI() {
+        self.setupCommonData()
+        self.setupLayout()
+    }
+    
+    func setupCommonData() {
+        self.setupCellView()
+        self.setupCellViewInside()
+        self.setupImaveView()
+        self.setupNameLabel()
+    }
+    
+    func setupCellView() {
+        self.cellView.translatesAutoresizingMaskIntoConstraints = false
+        self.cellView.backgroundColor = .white
+        self.cellView.layer.cornerRadius = Constants.viewCornerRadius
+    }
+    
+    func setupCellViewInside() {
+        self.cellViewInside.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func setupImaveView() {
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.tintColor = Colors.redColor.value
+    }
+    
+    func setupNameLabel() {
+        self.nameLabel.textAlignment = .left
+        self.nameLabel.numberOfLines = Int(Constants.numberOfLines)
+        self.nameLabel.font = AppFonts.regular15.font
+        self.nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.nameLabel.textColor = .black
+        self.nameLabel.adjustsFontSizeToFitWidth = true
+        self.nameLabel.minimumScaleFactor = Constants.labelScaleFactor
+    }
+    
+    func setupLayout() {
+        self.addSubview(self.cellView)
+        self.cellView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        self.addSubview(self.cellViewInside)
+        self.cellViewInside.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview().inset(Constraints.cellViewInsideInset)
+        }
+        
+        self.cellViewInside.addSubview(self.imageView)
+        self.imageView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.height.equalTo(Constants.heightImageView)
+            make.leading.equalToSuperview()
+        }
+        
+        self.cellViewInside.addSubview(self.nameLabel)
+        self.nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.imageView.snp.bottom).offset(Constraints.nameLabelTopOffset)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+    }
 }

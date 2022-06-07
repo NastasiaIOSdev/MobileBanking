@@ -158,6 +158,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             if let itemCell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: PaymentsCollectionViewCell.identifier,
                 for: indexPath) as? PaymentsCollectionViewCell {
+                itemCell.cell = paymentsDataArray[indexPath.row]
                 return itemCell
             }
             return UICollectionViewCell()
