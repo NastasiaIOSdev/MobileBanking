@@ -25,6 +25,16 @@
 		2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DC284F5D2700320A1E /* CurrencyViewController.swift */; };
 		2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */; };
 		2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */; };
+		2ECAC2E6284F6E9100320A1E /* MainGreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2E5284F6E9100320A1E /* MainGreetingView.swift */; };
+		2ECAC2E9284F72C600320A1E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECAC2E8284F72C600320A1E /* SnapKit */; };
+		2ECAC2EC284F9E5D00320A1E /* BigLabelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2EB284F9E5D00320A1E /* BigLabelButtonView.swift */; };
+		2ECAC2EE284FA79100320A1E /* NewCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */; };
+		2ECAC2F0284FA7A700320A1E /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */; };
+		2ECAC2F4284FA8E900320A1E /* PaymentsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */; };
+		2ECAC2F6284FA8FC00320A1E /* CardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */; };
+		2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F8284FB05100320A1E /* CardCell.swift */; };
+		2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2FA284FB06200320A1E /* CardCollectionViewCell.swift */; };
+		2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2FC284FB07500320A1E /* PaymentsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +58,15 @@
 		2ECAC2DC284F5D2700320A1E /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarAssembly.swift; sourceTree = "<group>"; };
+		2ECAC2E5284F6E9100320A1E /* MainGreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGreetingView.swift; sourceTree = "<group>"; };
+		2ECAC2EB284F9E5D00320A1E /* BigLabelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLabelButtonView.swift; sourceTree = "<group>"; };
+		2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardAssembly.swift; sourceTree = "<group>"; };
+		2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
+		2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCellModel.swift; sourceTree = "<group>"; };
+		2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellModel.swift; sourceTree = "<group>"; };
+		2ECAC2F8284FB05100320A1E /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		2ECAC2FA284FB06200320A1E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		2ECAC2FC284FB07500320A1E /* PaymentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECAC2E9284F72C600320A1E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,7 @@
 		2ECAC2BF284F467E00320A1E /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				2ECAC2EA284F9E1D00320A1E /* ReusableView */,
 				2ECAC2C7284F4DA000320A1E /* Colors.swift */,
 				2ECAC2C5284F4D9200320A1E /* AppFonts.swift */,
 				2ECAC2C9284F4DA500320A1E /* Fonts */,
@@ -106,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */,
+				2ECAC2F2284FA8C800320A1E /* Models */,
 				2ECAC2E2284F693E00320A1E /* View */,
 			);
 			path = MainModule;
@@ -163,6 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2D4284F5CCA00320A1E /* MainViewController.swift */,
+				2ECAC2E5284F6E9100320A1E /* MainGreetingView.swift */,
+				2ECAC2F7284FAFF200320A1E /* Cell */,
+				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +208,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2ECAC2EA284F9E1D00320A1E /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2EB284F9E5D00320A1E /* BigLabelButtonView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		2ECAC2F1284FA81A00320A1E /* NewCardModule */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */,
+				2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */,
+			);
+			path = NewCardModule;
+			sourceTree = "<group>";
+		};
+		2ECAC2F2284FA8C800320A1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */,
+				2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2ECAC2F7284FAFF200320A1E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2F8284FB05100320A1E /* CardCell.swift */,
+				2ECAC2FC284FB07500320A1E /* PaymentsCollectionViewCell.swift */,
+				2ECAC2FA284FB06200320A1E /* CardCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +260,9 @@
 			dependencies = (
 			);
 			name = MobileBankingApp;
+			packageProductDependencies = (
+				2ECAC2E8284F72C600320A1E /* SnapKit */,
+			);
 			productName = MobileBankingApp;
 			productReference = 2ECAC2A8284F44B400320A1E /* MobileBankingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +291,9 @@
 				Base,
 			);
 			mainGroup = 2ECAC29F284F44B400320A1E;
+			packageReferences = (
+				2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2ECAC2A9284F44B400320A1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,17 +325,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECAC2EC284F9E5D00320A1E /* BigLabelButtonView.swift in Sources */,
 				2ECAC2C6284F4D9200320A1E /* AppFonts.swift in Sources */,
+				2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */,
 				2ECAC2C8284F4DA000320A1E /* Colors.swift in Sources */,
+				2ECAC2F6284FA8FC00320A1E /* CardCellModel.swift in Sources */,
 				2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */,
+				2ECAC2F4284FA8E900320A1E /* PaymentsCellModel.swift in Sources */,
+				2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */,
 				2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */,
 				2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */,
+				2ECAC2EE284FA79100320A1E /* NewCardAssembly.swift in Sources */,
 				2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */,
 				2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */,
 				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
 				2ECAC2DB284F5D1300320A1E /* AccountAssembly.swift in Sources */,
+				2ECAC2F0284FA7A700320A1E /* NewCardViewController.swift in Sources */,
 				2ECAC2D9284F5D0200320A1E /* CurrencyAssemly.swift in Sources */,
+				2ECAC2E6284F6E9100320A1E /* MainGreetingView.swift in Sources */,
 				2ECAC2D5284F5CCA00320A1E /* MainViewController.swift in Sources */,
+				2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +489,7 @@
 				INFOPLIST_FILE = MobileBankingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -424,7 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,6 +516,7 @@
 				INFOPLIST_FILE = MobileBankingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,7 +528,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -476,6 +554,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ECAC2E8284F72C600320A1E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2ECAC2A0284F44B400320A1E /* Project object */;
 }
