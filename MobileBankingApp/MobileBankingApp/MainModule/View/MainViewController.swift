@@ -9,6 +9,8 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    private var cell: [PaymentsCellModel] = paymentsDataArray
+    
     private enum Texts {
         static let greetingLabel = " Добро пожаловать, "
         static let userGreetingLabel = "User !"
@@ -18,6 +20,13 @@ final class MainViewController: UIViewController {
     private enum Constant {
         static let imageGreting = "carbon_user-avatar-filled"
         static let plusButtonImage = "add-plus"
+        static let hetghtSectionCellPayments: CGFloat = 76
+        static let heightSectionCellCard: CGFloat = 180
+        static let paymetsCelloffset: CGFloat = 16
+        static let uiEdgeInsetPaymentsCellTopBottom: CGFloat = 10
+        static let uiEdgeInsetPaymentsCellLeadingTrailing: CGFloat = 8
+        static let uiEdgeInsetCardCellTopBottom: CGFloat = 10
+        static let uiEdgeInsetCardCellLeadingTrailing: CGFloat = 0
     }
     
     private enum Constraints {
@@ -73,7 +82,8 @@ private extension MainViewController {
         self.collectionView.backgroundColor = .clear
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        self.collectionView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellWithReuseIdentifier: <#T##String#>)
+        self.collectionView.register(CardCell.self, forCellWithReuseIdentifier: CardCell.identifier)
+        self.collectionView.register(PaymentsCollectionViewCell.self, forCellWithReuseIdentifier: PaymentsCollectionViewCell.identifier)
     }
     
     func setupLayout() {
@@ -88,6 +98,14 @@ private extension MainViewController {
             make.top.equalTo(self.greetingView.snp.bottom).offset(Constraints.plusButtonViewTopOffset)
             make.leading.trailing.equalToSuperview().inset(Constraints.plusButtonViewLeadingInset)
         }
+        
+        self.view.addSubview(self.collectionView)
+        self.collectionView.snp.makeConstraints { make in
+            make.top.equalTo(self.bigLabelAndButtonView.snp.bottom)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     func plusButtunTapped() {
@@ -96,15 +114,63 @@ private extension MainViewController {
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 1 {
+            return CGSize(
+                width: (view.frame.width/3) - Constant.paymetsCelloffset,
+                height: Constant.hetghtSectionCellPayments)
+        }
+        return CGSize(
+            width: view.frame.width,
+            height: Constant.heightSectionCellCard)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 1 {
+            return UIEdgeInsets(
+                top: Constant.uiEdgeInsetPaymentsCellTopBottom,
+                left: Constant.uiEdgeInsetPaymentsCellLeadingTrailing,
+                bottom: Constant.uiEdgeInsetPaymentsCellTopBottom,
+                right: Constant.uiEdgeInsetPaymentsCellLeadingTrailing)
+        }
+        return UIEdgeInsets(
+            top: Constant.uiEdgeInsetCardCellTopBottom,
+            left: Constant.uiEdgeInsetCardCellLeadingTrailing,
+            bottom: Constant.uiEdgeInsetCardCellTopBottom,
+            right: Constant.uiEdgeInsetCardCellLeadingTrailing)
+    }
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        if section == 1 {
+            return paymentsDataArray.count
+        }
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }    
+        if indexPath.section == 1 {
+            if let itemCell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PaymentsCollectionViewCell.identifier,
+                for: indexPath) as? PaymentsCollectionViewCell {
+                return itemCell
+            }
+            return UICollectionViewCell()
+        }
+        if let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: CardCell.identifier,
+            for: indexPath) as? CardCell {
+            return cell
+        }
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Нажата ячейка под номером \(indexPath.row)")
+    }
 }
