@@ -9,19 +9,45 @@
 /* Begin PBXBuildFile section */
 		2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AB284F44B400320A1E /* AppDelegate.swift */; };
 		2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */; };
-		2ECAC2B0284F44B400320A1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AF284F44B400320A1E /* ViewController.swift */; };
 		2ECAC2B5284F44B800320A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2B4284F44B800320A1E /* Assets.xcassets */; };
 		2ECAC2B8284F44B800320A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2B6284F44B800320A1E /* LaunchScreen.storyboard */; };
+		2ECAC2C6284F4D9200320A1E /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2C5284F4D9200320A1E /* AppFonts.swift */; };
+		2ECAC2C8284F4DA000320A1E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2C7284F4DA000320A1E /* Colors.swift */; };
+		2ECAC2CF284F58EB00320A1E /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2CA284F571500320A1E /* Inter-Light.ttf */; };
+		2ECAC2D0284F58EE00320A1E /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2CB284F572200320A1E /* Inter-Regular.ttf */; };
+		2ECAC2D1284F58F000320A1E /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2CC284F573400320A1E /* Inter-Medium.ttf */; };
+		2ECAC2D2284F58F400320A1E /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2CD284F573E00320A1E /* Inter-Bold.ttf */; };
+		2ECAC2D3284F58F600320A1E /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2CE284F574300320A1E /* Inter-SemiBold.ttf */; };
+		2ECAC2D5284F5CCA00320A1E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2D4284F5CCA00320A1E /* MainViewController.swift */; };
+		2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */; };
+		2ECAC2D9284F5D0200320A1E /* CurrencyAssemly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2D8284F5D0200320A1E /* CurrencyAssemly.swift */; };
+		2ECAC2DB284F5D1300320A1E /* AccountAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DA284F5D1300320A1E /* AccountAssembly.swift */; };
+		2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DC284F5D2700320A1E /* CurrencyViewController.swift */; };
+		2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */; };
+		2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2ECAC2A8284F44B400320A1E /* MobileBankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileBankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECAC2AB284F44B400320A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2ECAC2AF284F44B400320A1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2ECAC2B4284F44B800320A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ECAC2B7284F44B800320A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ECAC2B9284F44B800320A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ECAC2C5284F4D9200320A1E /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		2ECAC2C7284F4DA000320A1E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2ECAC2CA284F571500320A1E /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		2ECAC2CB284F572200320A1E /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		2ECAC2CC284F573400320A1E /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		2ECAC2CD284F573E00320A1E /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		2ECAC2CE284F574300320A1E /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		2ECAC2D4284F5CCA00320A1E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		2ECAC2D8284F5D0200320A1E /* CurrencyAssemly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyAssemly.swift; sourceTree = "<group>"; };
+		2ECAC2DA284F5D1300320A1E /* AccountAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAssembly.swift; sourceTree = "<group>"; };
+		2ECAC2DC284F5D2700320A1E /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
+		2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +80,107 @@
 		2ECAC2AA284F44B400320A1E /* MobileBankingApp */ = {
 			isa = PBXGroup;
 			children = (
-				2ECAC2AB284F44B400320A1E /* AppDelegate.swift */,
-				2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */,
-				2ECAC2AF284F44B400320A1E /* ViewController.swift */,
-				2ECAC2B4284F44B800320A1E /* Assets.xcassets */,
-				2ECAC2B6284F44B800320A1E /* LaunchScreen.storyboard */,
+				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
+				2ECAC2C3284F46FA00320A1E /* Tabbar */,
+				2ECAC2C0284F468B00320A1E /* MainModule */,
+				2ECAC2C1284F46BC00320A1E /* CurrencyModule */,
+				2ECAC2C2284F46CA00320A1E /* AccountModule */,
+				2ECAC2BF284F467E00320A1E /* Design */,
 				2ECAC2B9284F44B800320A1E /* Info.plist */,
 			);
 			path = MobileBankingApp;
+			sourceTree = "<group>";
+		};
+		2ECAC2BF284F467E00320A1E /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2C7284F4DA000320A1E /* Colors.swift */,
+				2ECAC2C5284F4D9200320A1E /* AppFonts.swift */,
+				2ECAC2C9284F4DA500320A1E /* Fonts */,
+				2ECAC2B4284F44B800320A1E /* Assets.xcassets */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		2ECAC2C0284F468B00320A1E /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */,
+				2ECAC2E2284F693E00320A1E /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		2ECAC2C1284F46BC00320A1E /* CurrencyModule */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2D8284F5D0200320A1E /* CurrencyAssemly.swift */,
+				2ECAC2E3284F694B00320A1E /* View */,
+			);
+			path = CurrencyModule;
+			sourceTree = "<group>";
+		};
+		2ECAC2C2284F46CA00320A1E /* AccountModule */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2DA284F5D1300320A1E /* AccountAssembly.swift */,
+				2ECAC2E4284F695B00320A1E /* View */,
+			);
+			path = AccountModule;
+			sourceTree = "<group>";
+		};
+		2ECAC2C3284F46FA00320A1E /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		2ECAC2C4284F4D4800320A1E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */,
+				2ECAC2B6284F44B800320A1E /* LaunchScreen.storyboard */,
+				2ECAC2AB284F44B400320A1E /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2ECAC2C9284F4DA500320A1E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2CA284F571500320A1E /* Inter-Light.ttf */,
+				2ECAC2CB284F572200320A1E /* Inter-Regular.ttf */,
+				2ECAC2CC284F573400320A1E /* Inter-Medium.ttf */,
+				2ECAC2CD284F573E00320A1E /* Inter-Bold.ttf */,
+				2ECAC2CE284F574300320A1E /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2ECAC2E2284F693E00320A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2D4284F5CCA00320A1E /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2ECAC2E3284F694B00320A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2DC284F5D2700320A1E /* CurrencyViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2ECAC2E4284F695B00320A1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +241,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ECAC2D2284F58F400320A1E /* Inter-Bold.ttf in Resources */,
 				2ECAC2B8284F44B800320A1E /* LaunchScreen.storyboard in Resources */,
+				2ECAC2CF284F58EB00320A1E /* Inter-Light.ttf in Resources */,
+				2ECAC2D0284F58EE00320A1E /* Inter-Regular.ttf in Resources */,
+				2ECAC2D1284F58F000320A1E /* Inter-Medium.ttf in Resources */,
 				2ECAC2B5284F44B800320A1E /* Assets.xcassets in Resources */,
+				2ECAC2D3284F58F600320A1E /* Inter-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,9 +258,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ECAC2B0284F44B400320A1E /* ViewController.swift in Sources */,
+				2ECAC2C6284F4D9200320A1E /* AppFonts.swift in Sources */,
+				2ECAC2C8284F4DA000320A1E /* Colors.swift in Sources */,
+				2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */,
 				2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */,
 				2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */,
+				2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */,
+				2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */,
+				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
+				2ECAC2DB284F5D1300320A1E /* AccountAssembly.swift in Sources */,
+				2ECAC2D9284F5D0200320A1E /* CurrencyAssemly.swift in Sources */,
+				2ECAC2D5284F5CCA00320A1E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
