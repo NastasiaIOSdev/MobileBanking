@@ -176,4 +176,18 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Нажата ячейка под индексом - \(indexPath.row)")
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+        cell.alpha = 0
+            let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
+            cell.layer.transform = transform
+            UIView.animate(withDuration: 0.9) {
+                cell.alpha = 1
+                cell.layer.transform = CATransform3DIdentity
+            }
+        }
+    }
 }

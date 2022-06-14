@@ -14,6 +14,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
     
     private enum Constants {
         static let nameImageView = "card"
+        static let cardTypeImage = "icons8-visa"
     }
     
     private enum Constraints {
@@ -25,7 +26,13 @@ final class CardCollectionViewCell: UICollectionViewCell {
     
     private let cellView = UIView()
     private let imageView = UIImageView()
-    private let cardView = UIView()
+    private lazy var cardView = CardView(settings: .init(
+        cardNumberLabel: "* * * * * * * * * * * * 3498",
+        expareDateLabel: "Expiry Date",
+        expareDateNumbersLabel: "05/23",
+        typeCardImage: Constants.cardTypeImage,
+        availableBalanceLabel: "Available\nBalance",
+        balanceLabel: "40 KGS"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,8 +60,6 @@ private extension CardCollectionViewCell {
         self.imageView.clipsToBounds = true
         self.imageView.contentMode = .scaleAspectFill
         self.imageView.image = UIImage(named: Constants.nameImageView)
-        
-        self.cardView.backgroundColor = .purple
     }
     
     func setupLayout() {

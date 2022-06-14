@@ -53,7 +53,7 @@ enum AppFonts {
         case .semibold12:
             return UIFont(name: "Inter-SemiBold", size: 12)
         case .semibold22:
-            return UIFont(name: "Inter-SemiBold", size: 22)
+            return UIFont(name: "Inter-SemiBold", size: 21)
         }
     }
 }

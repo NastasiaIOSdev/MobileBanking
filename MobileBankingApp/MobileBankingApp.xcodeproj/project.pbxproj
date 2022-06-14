@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AB284F44B400320A1E /* AppDelegate.swift */; };
 		2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */; };
 		2ECAC2B5284F44B800320A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2B4284F44B800320A1E /* Assets.xcassets */; };
@@ -26,7 +27,6 @@
 		2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */; };
 		2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2E0284F5EAD00320A1E /* TabbarAssembly.swift */; };
 		2ECAC2E6284F6E9100320A1E /* MainGreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2E5284F6E9100320A1E /* MainGreetingView.swift */; };
-		2ECAC2E9284F72C600320A1E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ECAC2E8284F72C600320A1E /* SnapKit */; };
 		2ECAC2EC284F9E5D00320A1E /* BigLabelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2EB284F9E5D00320A1E /* BigLabelButtonView.swift */; };
 		2ECAC2EE284FA79100320A1E /* NewCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */; };
 		2ECAC2F0284FA7A700320A1E /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */; };
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ECAC2E9284F72C600320A1E /* SnapKit in Frameworks */,
+				2EB29D2128590BA90027220C /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,9 +164,9 @@
 		2ECAC2C4284F4D4800320A1E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				2ECAC2AB284F44B400320A1E /* AppDelegate.swift */,
 				2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */,
 				2ECAC2B6284F44B800320A1E /* LaunchScreen.storyboard */,
-				2ECAC2AB284F44B400320A1E /* AppDelegate.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 			);
 			name = MobileBankingApp;
 			packageProductDependencies = (
-				2ECAC2E8284F72C600320A1E /* SnapKit */,
+				2EB29D2028590BA90027220C /* SnapKit */,
 			);
 			productName = MobileBankingApp;
 			productReference = 2ECAC2A8284F44B400320A1E /* MobileBankingApp.app */;
@@ -295,7 +295,7 @@
 			);
 			mainGroup = 2ECAC29F284F44B400320A1E;
 			packageReferences = (
-				2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2EB29D1F28590BA90027220C /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 2ECAC2A9284F44B400320A1E /* Products */;
 			projectDirPath = "";
@@ -560,7 +560,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		2EB29D1F28590BA90027220C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -571,9 +571,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2ECAC2E8284F72C600320A1E /* SnapKit */ = {
+		2EB29D2028590BA90027220C /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2ECAC2E7284F72C600320A1E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 2EB29D1F28590BA90027220C /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
