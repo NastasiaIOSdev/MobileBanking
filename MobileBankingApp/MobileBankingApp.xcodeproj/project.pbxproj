@@ -16,6 +16,10 @@
 		2EB29D3A2859CFE50027220C /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D392859CFE50027220C /* DateConverter.swift */; };
 		2EB29D3D2859F96E0027220C /* AccountCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D3C2859F96E0027220C /* AccountCellModel.swift */; };
 		2EB29D3F2859FCB80027220C /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D3E2859FCB80027220C /* AccountTableViewCell.swift */; };
+		2EB29D44285A16330027220C /* NewCardCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D43285A16330027220C /* NewCardCustomView.swift */; };
+		2EB29D46285A483D0027220C /* OwnerCardTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */; };
+		2EB29D48285A48820027220C /* CardNumberTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */; };
+		2EB29D4A285A5CFA0027220C /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D49285A5CFA0027220C /* CustomButtonView.swift */; };
 		2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AB284F44B400320A1E /* AppDelegate.swift */; };
 		2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */; };
 		2ECAC2B5284F44B800320A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ECAC2B4284F44B800320A1E /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		2EB29D392859CFE50027220C /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		2EB29D3C2859F96E0027220C /* AccountCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellModel.swift; sourceTree = "<group>"; };
 		2EB29D3E2859FCB80027220C /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		2EB29D43285A16330027220C /* NewCardCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardCustomView.swift; sourceTree = "<group>"; };
+		2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardTextFieldView.swift; sourceTree = "<group>"; };
+		2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumberTextFieldView.swift; sourceTree = "<group>"; };
+		2EB29D49285A5CFA0027220C /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		2ECAC2A8284F44B400320A1E /* MobileBankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileBankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECAC2AB284F44B400320A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +124,17 @@
 			path = Converter;
 			sourceTree = "<group>";
 		};
+		2EB29D42285A11D00027220C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */,
+				2EB29D43285A16330027220C /* NewCardCustomView.swift */,
+				2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */,
+				2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2ECAC29F284F44B400320A1E = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +157,7 @@
 				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
 				2ECAC2C3284F46FA00320A1E /* Tabbar */,
 				2ECAC2C0284F468B00320A1E /* MainModule */,
+				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 				2ECAC2C1284F46BC00320A1E /* CurrencyModule */,
 				2ECAC2C2284F46CA00320A1E /* AccountModule */,
 				2EB29D3B2859D09E0027220C /* Converter */,
@@ -226,7 +246,6 @@
 				2ECAC2E5284F6E9100320A1E /* MainGreetingView.swift */,
 				2ECAC2FE284FD1EA00320A1E /* CardView.swift */,
 				2ECAC2F7284FAFF200320A1E /* Cell */,
-				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2EB284F9E5D00320A1E /* BigLabelButtonView.swift */,
+				2EB29D49285A5CFA0027220C /* CustomButtonView.swift */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
@@ -263,7 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */,
-				2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */,
+				2EB29D42285A11D00027220C /* View */,
 			);
 			path = NewCardModule;
 			sourceTree = "<group>";
@@ -371,6 +391,7 @@
 				2ECAC2EC284F9E5D00320A1E /* BigLabelButtonView.swift in Sources */,
 				2ECAC2C6284F4D9200320A1E /* AppFonts.swift in Sources */,
 				2EB29D3A2859CFE50027220C /* DateConverter.swift in Sources */,
+				2EB29D4A285A5CFA0027220C /* CustomButtonView.swift in Sources */,
 				2EB29D3D2859F96E0027220C /* AccountCellModel.swift in Sources */,
 				2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */,
 				2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */,
@@ -380,6 +401,7 @@
 				2ECAC2F4284FA8E900320A1E /* PaymentsCellModel.swift in Sources */,
 				2EB29D362859AC8B0027220C /* CurrencyTableViewCell.swift in Sources */,
 				2ECAC2FF284FD1EA00320A1E /* CardView.swift in Sources */,
+				2EB29D46285A483D0027220C /* OwnerCardTextFieldView.swift in Sources */,
 				2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */,
 				2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */,
 				2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */,
@@ -394,9 +416,11 @@
 				2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */,
 				2EB29D3F2859FCB80027220C /* AccountTableViewCell.swift in Sources */,
 				2ECAC2E6284F6E9100320A1E /* MainGreetingView.swift in Sources */,
+				2EB29D44285A16330027220C /* NewCardCustomView.swift in Sources */,
 				2ECAC2D5284F5CCA00320A1E /* MainViewController.swift in Sources */,
 				2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */,
 				2EB29D342859A9E00027220C /* CalculyatorAssembly.swift in Sources */,
+				2EB29D48285A48820027220C /* CardNumberTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

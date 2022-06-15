@@ -15,7 +15,9 @@ class AccountViewController: UIViewController {
     private let tableView = UITableView()
     private lazy var pagelabel = BigLabelButtonView(settings: .init(
         label: "Профиль",
+        font: .bold34,
         image: "logout",
+        color: .black,
         tapHandler: {
             self.logoutButtonTapped()
         })

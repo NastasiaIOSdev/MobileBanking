@@ -44,7 +44,9 @@ final class MainViewController: UIViewController {
     
     private lazy var bigLabelAndButtonView = BigLabelButtonView(settings: .init(
         label: Texts.mainLabel,
+        font: .bold34,
         image: Constant.plusButtonImage,
+        color: .redColor,
         tapHandler: {
             self.plusButtunTapped()
         }))

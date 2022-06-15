@@ -11,7 +11,9 @@ import SnapKit
 class BigLabelButtonView: UIView {
     struct Setting {
         let label: String
+        let font: AppFonts
         let image: String
+        let color: Colors
         let tapHandler: () -> Void
     }
     
@@ -37,7 +39,9 @@ class BigLabelButtonView: UIView {
     
     func configureView(with settings: Setting) {
         self.imageView.image = UIImage(named: settings.image)
+        self.imageView.tintColor = settings.color.value
         self.pageMainLabel.text = settings.label
+        self.pageMainLabel.font = settings.font.font
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
         self.addGestureRecognizer(gestureRecognizer)

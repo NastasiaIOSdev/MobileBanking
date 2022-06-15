@@ -32,7 +32,7 @@ final class CardCollectionViewCell: UICollectionViewCell {
         expareDateNumbersLabel: "05/23",
         typeCardImage: Constants.cardTypeImage,
         availableBalanceLabel: "Available\nBalance",
-        balanceLabel: "40 KGS"))
+        balanceLabel: "3033 RUB"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)

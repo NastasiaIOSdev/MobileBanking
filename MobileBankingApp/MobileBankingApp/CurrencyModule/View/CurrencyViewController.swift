@@ -26,7 +26,9 @@ class CurrencyViewController: UIViewController {
     private var cell: [CurrencyModel] = currencyDataArray
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
         label: "Курсы валют",
+        font: .bold34,
         image: "calculator-one",
+        color: .black,
         tapHandler: {
             self.calcButtonTapped()
         }))

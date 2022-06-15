@@ -15,6 +15,7 @@ enum Colors {
     case currencylabel
     case borderButton
     case tabbarLabelOf
+    case black
     
     var value: UIColor {
         switch self {
@@ -30,6 +31,8 @@ enum Colors {
             return UIColor(red: 226/255, green: 232/255, blue: 240/255, alpha: 1)
         case .tabbarLabelOf:
             return UIColor(red: 170/255, green: 178/255, blue: 191/255, alpha: 1)
+        case .black:
+            return UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         }
     }
 }
