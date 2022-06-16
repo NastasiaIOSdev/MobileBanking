@@ -32,7 +32,7 @@ final class CustomAccountView: UIView, ICustomAccountView  {
         static let userNameLabelText = "Имя пользователя"
     }
     
-    // MARK: - Properties
+// MARK: - Properties
     
     private var itemCell: [AccountCellModel] = accountDataArray
     private let tableView = UITableView()

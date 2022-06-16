@@ -9,7 +9,8 @@ import UIKit
 
 enum NewCardAssembly {
     static func build() -> NewCardViewController {
-        let vc = NewCardViewController()
+        let presenter = NewCardPresenter()
+        let vc = NewCardViewController(presenter: presenter)
         return vc
     }
 }
