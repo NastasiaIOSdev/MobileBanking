@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E9F4914285B5CF50024D7C4 /* CustomAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4913285B5CF50024D7C4 /* CustomAccountView.swift */; };
+		2E9F4916285B684A0024D7C4 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4915285B684A0024D7C4 /* AccountPresenter.swift */; };
 		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D2C28599F200027220C /* CurrencyModel.swift */; };
 		2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D302859A9950027220C /* CalculyatorViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E9F4913285B5CF50024D7C4 /* CustomAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAccountView.swift; sourceTree = "<group>"; };
+		2E9F4915285B684A0024D7C4 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		2EB29D2C28599F200027220C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		2EB29D302859A9950027220C /* CalculyatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorViewController.swift; sourceTree = "<group>"; };
 		2EB29D332859A9E00027220C /* CalculyatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorAssembly.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 				2ECAC2C1284F46BC00320A1E /* CurrencyModule */,
 				2ECAC2C2284F46CA00320A1E /* AccountModule */,
+				2E9F4915285B684A0024D7C4 /* AccountPresenter.swift */,
 				2EB29D3B2859D09E0027220C /* Converter */,
 				2ECAC2BF284F467E00320A1E /* Design */,
 				2ECAC2B9284F44B800320A1E /* Info.plist */,
@@ -264,6 +269,7 @@
 		2ECAC2E4284F695B00320A1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E9F4913285B5CF50024D7C4 /* CustomAccountView.swift */,
 				2ECAC2DE284F5D3500320A1E /* AccountViewController.swift */,
 				2EB29D3E2859FCB80027220C /* AccountTableViewCell.swift */,
 			);
@@ -405,9 +411,11 @@
 				2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */,
 				2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */,
 				2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */,
+				2E9F4914285B5CF50024D7C4 /* CustomAccountView.swift in Sources */,
 				2EB29D382859CE9B0027220C /* CurrencyDateView.swift in Sources */,
 				2ECAC2EE284FA79100320A1E /* NewCardAssembly.swift in Sources */,
 				2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */,
+				2E9F4916285B684A0024D7C4 /* AccountPresenter.swift in Sources */,
 				2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */,
 				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
 				2ECAC2DB284F5D1300320A1E /* AccountAssembly.swift in Sources */,

@@ -9,7 +9,8 @@ import UIKit
 
 enum AccountAssembly {
     static func biuld() -> AccountViewController {
-        let vc = AccountViewController()
+        let presenter = AccountPresenter(model: AccountCellModel())
+        let vc = AccountViewController(presenter: presenter)
         return vc
     }
 }
