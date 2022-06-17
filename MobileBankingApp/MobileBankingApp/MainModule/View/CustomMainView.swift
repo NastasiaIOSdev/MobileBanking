@@ -14,33 +14,7 @@ protocol ICustomMainView: AnyObject {
 
 final class CustomMainView: UIView, ICustomMainView {
     
-    private enum Texts {
-        static let greetingLabel = " Добро пожаловать, "
-        static let userGreetingLabel = "User !"
-        static let mainLabel = "Карты"
-    }
-    
-    private enum Constant {
-        static let imageGreting = "carbon_user-avatar-filled"
-        static let plusButtonImage = "add-plus"
-        static let numberOfSections = 2
-        static let numberOfItemsInSection = 1
-        static let hetghtSectionCellPayments: CGFloat = 76
-        static let heightSectionCellCard: CGFloat = 180
-        static let paymetsCelloffset: CGFloat = 16
-        static let uiEdgeInsetPaymentsCellTopBottom: CGFloat = 10
-        static let uiEdgeInsetPaymentsCellLeadingTrailing: CGFloat = 8
-        static let uiEdgeInsetCardCellTopBottom: CGFloat = 10
-        static let uiEdgeInsetCardCellLeadingTrailing: CGFloat = 0
-    }
-    
-    private enum Constraints {
-        static let greetingLabelOffset = 16
-        static let plusButtonViewTopOffset = 5
-        static let plusButtonViewLeadingInset = 16
-    }
-    
-    // MARK: - Property
+// MARK: - Property
     
     var plusButtunTappedActionHandler: (() -> ())?
     
@@ -69,11 +43,11 @@ final class CustomMainView: UIView, ICustomMainView {
         return collectionView
     }()
     
-    // MARK: - Init
+// MARK: - Init
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = Colors.backgroundGray.value
+        self.backgroundColor = Colors.backgroundGray.value
         self.setupUI()
     }
     
@@ -82,6 +56,8 @@ final class CustomMainView: UIView, ICustomMainView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - Setup Layout & CommonData
 
 private extension CustomMainView {
     func setupUI() {
@@ -121,6 +97,8 @@ private extension CustomMainView {
     }
 }
 
+// MARK: - CollectionView DelegateFlowLayout
+
 extension CustomMainView:  UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
@@ -147,6 +125,8 @@ extension CustomMainView:  UICollectionViewDelegateFlowLayout {
             right: Constant.uiEdgeInsetCardCellLeadingTrailing)
     }
 }
+
+// MARK: - CollectionView Delegate & Datasource
 
 extension CustomMainView: UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -195,5 +175,35 @@ extension CustomMainView: UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.layer.transform = CATransform3DIdentity
             }
         }
+    }
+}
+
+// MARK: - Constants, Texts, Constraints
+
+private extension CustomMainView {
+    private enum Texts {
+        static let greetingLabel = " Добро пожаловать, "
+        static let userGreetingLabel = "User !"
+        static let mainLabel = "Карты"
+    }
+    
+    private enum Constant {
+        static let imageGreting = "carbon_user-avatar-filled"
+        static let plusButtonImage = "add-plus"
+        static let numberOfSections = 2
+        static let numberOfItemsInSection = 1
+        static let hetghtSectionCellPayments: CGFloat = 76
+        static let heightSectionCellCard: CGFloat = 180
+        static let paymetsCelloffset: CGFloat = 16
+        static let uiEdgeInsetPaymentsCellTopBottom: CGFloat = 10
+        static let uiEdgeInsetPaymentsCellLeadingTrailing: CGFloat = 8
+        static let uiEdgeInsetCardCellTopBottom: CGFloat = 10
+        static let uiEdgeInsetCardCellLeadingTrailing: CGFloat = 0
+    }
+    
+    private enum Constraints {
+        static let greetingLabelOffset = 16
+        static let plusButtonViewTopOffset = 5
+        static let plusButtonViewLeadingInset = 16
     }
 }

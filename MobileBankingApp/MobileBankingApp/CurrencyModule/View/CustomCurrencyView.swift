@@ -12,60 +12,51 @@ protocol ICustomCurrencyView: AnyObject {
 }
 
 final class CustomCurrencyView: UIView, ICustomCurrencyView {
-   
-    private enum Constants {
-        
-    }
-    
-    private enum Texts {
-        static let searchBarPlaseholder = "Поиск"
-    }
-    
-    private enum Constraints {
-        static let emptyViewWith = 10
-    }
-    
-//MARK: - Property
+  
+    //MARK: - Property
     
     var calcButtonTapActionhandler: (() -> ())?
     
     private var cell: [CurrencyModel] = currencyDataArray
     
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
-        label: "Курсы валют",
+        label: Texts.pageLabelText,
         font: .bold34,
-        image: "calculator-one",
+        image: Constants.pageLabelImage,
         color: .black,
         tapHandler: {
             self.calcButtonTapActionhandler?()
         }))
-
+    
     private let searchTextField = UISearchTextField()
     
     private let currencyDateLabel = CurrencyDateView(settings: .init(
-        label: "Курсы на",
+        label: Texts.currencyDateLabelText,
         date: ""))
     
     private let tableView = UITableView()
     
     // MARK: - Setup SearchTF
-       
-       func setupSearchField() {
-           self.searchTextField.backgroundColor = Colors.searchBarGray.value
-           self.searchTextField.tintColor = .systemGray
-           self.searchTextField.layer.masksToBounds = true
-           self.searchTextField.attributedPlaceholder = NSAttributedString(
-               string: Texts.searchBarPlaseholder,
-               attributes: [NSAttributedString.Key.font : AppFonts.regular16.font as Any,
-                            NSAttributedString.Key.foregroundColor : Colors.currencylabel.value
-                           ]
-               )
-               let emptyView = UIView(frame: .init(x: .zero, y: .zero, width: Constraints.emptyViewWith, height: .zero))
-               self.searchTextField.leftViewMode = .always
-               self.searchTextField.leftView = emptyView
-               self.searchTextField.rightViewMode = .always
-               self.searchTextField.rightView = emptyView
-       }
+    
+    func setupSearchField() {
+        self.searchTextField.backgroundColor = Colors.searchBarGray.value
+        self.searchTextField.tintColor = .systemGray
+        self.searchTextField.layer.masksToBounds = true
+        self.searchTextField.attributedPlaceholder = NSAttributedString(
+            string: Texts.searchBarPlaseholder,
+            attributes: [NSAttributedString.Key.font : AppFonts.regular16.font as Any,
+                         NSAttributedString.Key.foregroundColor : Colors.currencylabel.value
+                        ]
+        )
+        let emptyView = UIView(frame: .init(x: .zero, y: .zero, width: Constants.emptyViewWith, height: .zero))
+        self.searchTextField.leftViewMode = .always
+        self.searchTextField.leftView = emptyView
+        self.searchTextField.rightViewMode = .always
+        self.searchTextField.rightView = emptyView
+    }
+    
+    // MARK: - Init
+    
     init() {
         super.init(frame: .zero)
         self.backgroundColor = Colors.backgroundGray.value
@@ -92,9 +83,9 @@ private extension CustomCurrencyView {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.separatorStyle = .singleLine
-        self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        self.tableView.separatorInset = Constants.tableViewSeparatorInsert
         self.tableView.backgroundColor = .white
-        self.tableView.rowHeight = 68
+        self.tableView.rowHeight = Constants.tableViewRowHeight
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.register(CurrencyTableViewCell.self, forCellReuseIdentifier: CurrencyTableViewCell.identifier)
     }
@@ -103,25 +94,25 @@ private extension CustomCurrencyView {
         self.addSubview(self.pageLabel)
         self.pageLabel.snp.makeConstraints { make in
             make.top.equalTo(self.safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.leading.trailing.equalToSuperview().inset(Constraints.pageLabelLeadingInset)
         }
         
         self.addSubview(self.searchTextField)
         self.searchTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.pageLabel.snp.bottom).offset(15)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(36)
+            make.top.equalTo(self.pageLabel.snp.bottom).offset(Constraints.searchTextFieldTopOffset)
+            make.leading.trailing.equalToSuperview().inset(Constraints.searchTextFieldLeadingInset)
+            make.height.equalTo(Constants.searchTextFieldHeight)
         }
         
         self.addSubview(self.currencyDateLabel)
         self.currencyDateLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.searchTextField.snp.bottom).offset(20)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(self.searchTextField.snp.bottom).offset(Constraints.currencyDateLabelTopOffset)
+            make.leading.trailing.equalToSuperview().inset(Constraints.currencyDateLabelLeadingInset)
         }
         
         self.addSubview(self.tableView)
         self.tableView.snp.makeConstraints { make in
-            make.top.equalTo(self.currencyDateLabel.snp.bottom).offset(10)
+            make.top.equalTo(self.currencyDateLabel.snp.bottom).offset(Constraints.tableViewTopOffset)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
@@ -147,4 +138,31 @@ extension CustomCurrencyView: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// MARK: - Constants, Texts, Constrants
 
+private extension CustomCurrencyView {
+   
+    private enum Constants {
+        static let pageLabelImage = "calculator-one"
+        static let tableViewSeparatorInsert = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        static let tableViewRowHeight: CGFloat = 68
+        static let emptyViewWith = 10
+        static let searchTextFieldHeight: CGFloat = 36
+    }
+    
+    private enum Texts {
+        static let searchBarPlaseholder = "Поиск"
+        static let pageLabelText = "Курсы валют"
+        static let currencyDateLabelText = "Курсы на"
+        
+    }
+    
+    private enum Constraints {
+        static let pageLabelLeadingInset: CGFloat = 16
+        static let searchTextFieldTopOffset: CGFloat = 15
+        static let searchTextFieldLeadingInset: CGFloat = 16
+        static let currencyDateLabelTopOffset: CGFloat = 20
+        static let currencyDateLabelLeadingInset: CGFloat = 16
+        static let tableViewTopOffset: CGFloat = 10
+    }
+}

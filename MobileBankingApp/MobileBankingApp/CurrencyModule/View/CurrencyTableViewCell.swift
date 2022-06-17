@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CurrencyTableViewCell: UITableViewCell {
-
+final class CurrencyTableViewCell: UITableViewCell {
+    
     static let identifier = "CurrencyTableViewCell"
-
+    
     private enum Constants {
         static let heightCellview = 56
         static let heightImageView = 44
@@ -22,6 +22,8 @@ class CurrencyTableViewCell: UITableViewCell {
         static let charCodeLabelImageViewTopBottomInset = 7
         static let charCodeLabelLeadingOffset = 25
     }
+    
+// MARK: - Property
     
     var cell: CurrencyModel? {
         didSet {
@@ -39,6 +41,8 @@ class CurrencyTableViewCell: UITableViewCell {
     let nameLabel = UILabel()
     let valueLabel = UILabel()
     
+// MARK: - Init
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .clear
@@ -51,7 +55,10 @@ class CurrencyTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Setup CommonData
+
 private extension CurrencyTableViewCell {
+    
     func setupUI() {
         self.setupCommonData()
         self.setupLayot()
@@ -77,6 +84,11 @@ private extension CurrencyTableViewCell {
         self.valueLabel.textAlignment = .right
         self.valueLabel.textColor = .black
     }
+}
+
+// MARK: - Setup Layout
+
+private extension CurrencyTableViewCell {
     
     func setupLayot() {
         self.addSubview(self.cellView)

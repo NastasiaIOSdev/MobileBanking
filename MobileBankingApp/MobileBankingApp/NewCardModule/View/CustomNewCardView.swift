@@ -9,40 +9,15 @@ import UIKit
 import SnapKit
 
 protocol ICustomNewCardView: AnyObject {
+    
     var dismissButtonTappedActionHandler: (() -> ())? { get set }
     var addCardButtonTappedActionHandler: (() -> ())? { get set }
 }
 
 final class CustomNewCardView: UIView, ICustomNewCardView {
     
-    private enum Constants {
-        static let pageLabelImage = "cross_btn"
-        static let typeCardImage = "mc_symbol 4"
-        static let availableBalanceLabelText = "Card holder"
-        
-    }
-    private enum Texts {
-        static let pageLabelText = "Добавить Карту"
-        static let cardNamberLabelText = "* * * *  * * * *  * * * *  4568"
-        static let expareDateLabelTaxt = "Card holder"
-        static let expareDateNumbersLabelText = "Card holder"
-        static let balanceLabelText = "Card holder"
-        static let nameCardOwnerTFHeaderText = "Имя владельца карты"
-        static let nameCardOwnerTFvalueText = "Ivanov Ivan"
-        static let cardNumberTFHeaderText = "Номер карты"
-        static let cardNumberTFValueText = "3485 1245 9875 4568"
-        static let expDateTFHeaderText = "Дата истечения срока"
-        static let expDateTFValueText = "09 / 24 "
-        static let cvvTextFieldHeaderText = "CVV"
-        static let cvvTextFieldValueText = "722"
-        static let addCardButtonLabelText = "Добавить"
-    }
-    
-    private enum Constraints {
-        
-    }
-    
     // MARK: - Propery
+    
     private let scrolView = UIScrollView()
     
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
@@ -89,6 +64,8 @@ final class CustomNewCardView: UIView, ICustomNewCardView {
         tapHandler: {
             self.addCardButtonTappedActionHandler!()
         }))
+
+// MARK: - Init
     
     init() {
         super.init(frame: .zero)
@@ -101,7 +78,10 @@ final class CustomNewCardView: UIView, ICustomNewCardView {
     }
 }
 
+// MARK: - Setup Layout
+
 private extension CustomNewCardView {
+   
     func setupUI() {
         self.customCardViewImage.image = UIImage(named: "card_backgr")
         
@@ -112,16 +92,16 @@ private extension CustomNewCardView {
         
         self.scrolView.addSubview(self.pageLabel)
         self.pageLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(25)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().offset(Constraints.pageLabelTopOffset)
+            make.leading.trailing.equalToSuperview().inset(Constraints.pageLabelLeadingInset)
         }
         
         self.scrolView.addSubview(self.cardView)
         self.cardView.snp.makeConstraints { make in
-            make.top.equalTo(self.pageLabel.snp.bottom).offset(26)
+            make.top.equalTo(self.pageLabel.snp.bottom).offset(Constraints.cardViewTopOffset)
             make.centerX.equalToSuperview()
-            make.height.equalTo(216)
-            make.width.equalTo(340)
+            make.height.equalTo(Constants.cardViewHeight)
+            make.width.equalTo(Constants.cardViewWith)
         }
         
         self.cardView.addSubview(self.customCardViewImage)
@@ -132,43 +112,97 @@ private extension CustomNewCardView {
         
         self.customCardViewImage.addSubview(self.customCardView)
         self.customCardView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(23)
-            make.bottom.equalToSuperview().inset(18)
-            make.leading.equalToSuperview().inset(28)
-            make.trailing.equalToSuperview().inset(18)
+            make.top.equalToSuperview().inset(Constraints.customCardViewTopInset)
+            make.bottom.equalToSuperview().inset(Constraints.customCardViewBottomInset)
+            make.leading.equalToSuperview().inset(Constraints.customCardViewLeadingInset)
+            make.trailing.equalToSuperview().inset(Constraints.customCardViewTrailingInset)
         }
         
         self.scrolView.addSubview(self.nameCardOwnerTF)
         self.nameCardOwnerTF.snp.makeConstraints { make in
-            make.top.equalTo(self.cardView.snp.bottom).offset(25)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(self.cardView.snp.bottom).offset(Constraints.nameCardOwnerTFTopOffset)
+            make.leading.trailing.equalToSuperview().inset(Constraints.nameCardOwnerTFLeadingInset)
         }
         
         self.scrolView.addSubview(self.cardNumberTF)
         self.cardNumberTF.snp.makeConstraints { make in
-            make.top.equalTo(self.nameCardOwnerTF.snp.bottom).offset(25)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(self.nameCardOwnerTF.snp.bottom).offset(Constraints.cardNumberTFTopOffset)
+            make.leading.trailing.equalToSuperview().inset(Constraints.cardNumberTFLeadingInset)
         }
         
         self.scrolView.addSubview(self.expDateTF)
         self.expDateTF.snp.makeConstraints { make in
-            make.top.equalTo(self.cardNumberTF.snp.bottom).offset(25)
-            make.leading.equalToSuperview().inset(16)
+            make.top.equalTo(self.cardNumberTF.snp.bottom).offset(Constraints.expDateTFTopOffset)
+            make.leading.equalToSuperview().inset(Constraints.expDateTFLeadingInsrt)
         }
         
         self.scrolView.addSubview(self.cvvTextField)
         self.cvvTextField.snp.makeConstraints { make in
-            make.top.equalTo(self.cardNumberTF.snp.bottom).offset(25)
-            make.leading.equalTo(self.expDateTF.snp.trailing).offset(25)
-            make.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(self.cardNumberTF.snp.bottom).offset(Constraints.cvvTextFieldTopOffset)
+            make.leading.equalTo(self.expDateTF.snp.trailing).offset(Constraints.cvvTextFieldLeadingOffset)
+            make.trailing.equalToSuperview().inset(Constraints.cvvTextFieldTrailingInset)
         }
         
         self.scrolView.addSubview(self.addCardButton)
         self.addCardButton.snp.makeConstraints { make in
-            make.top.equalTo(self.expDateTF.snp.bottom).offset(35)
-            make.leading.equalToSuperview().inset(16)
-            make.trailing.equalToSuperview().inset(16)
-            make.bottom.equalToSuperview().offset(-68)
+            make.top.equalTo(self.expDateTF.snp.bottom).offset(Constraints.addCardButtonTopOffset)
+            make.leading.equalToSuperview().inset(Constraints.addCardButtonLeadingInset)
+            make.trailing.equalToSuperview().inset(Constraints.addCardButtonTrailingInset)
+            make.bottom.equalToSuperview().offset(Constraints.addCardButtonBottomOffset)
         }
     }
+}
+
+// MARK: - Constants, Constraints, Texts
+
+private extension CustomNewCardView {
+    private enum Constants {
+        static let pageLabelImage = "cross_btn"
+        static let typeCardImage = "mc_symbol 4"
+        static let availableBalanceLabelText = "Card holder"
+        static let cardViewHeight = 216
+        static let cardViewWith = 340
+        
+    }
+    
+    private enum Texts {
+        static let pageLabelText = "Добавить Карту"
+        static let cardNamberLabelText = "* * * *  * * * *  * * * *  4568"
+        static let expareDateLabelTaxt = "Card holder"
+        static let expareDateNumbersLabelText = "Card holder"
+        static let balanceLabelText = "Card holder"
+        static let nameCardOwnerTFHeaderText = "Имя владельца карты"
+        static let nameCardOwnerTFvalueText = "Ivanov Ivan"
+        static let cardNumberTFHeaderText = "Номер карты"
+        static let cardNumberTFValueText = "3485 1245 9875 4568"
+        static let expDateTFHeaderText = "Дата истечения срока"
+        static let expDateTFValueText = "09 / 24 "
+        static let cvvTextFieldHeaderText = "CVV"
+        static let cvvTextFieldValueText = "722"
+        static let addCardButtonLabelText = "Добавить"
+    }
+    
+    private enum Constraints {
+        static let pageLabelTopOffset: CGFloat = 25
+        static let pageLabelLeadingInset: CGFloat = 16
+        static let cardViewTopOffset: CGFloat = 26
+        static let customCardViewTopInset: CGFloat = 23
+        static let customCardViewBottomInset: CGFloat = 18
+        static let customCardViewLeadingInset: CGFloat = 28
+        static let customCardViewTrailingInset: CGFloat = 18
+        static let nameCardOwnerTFTopOffset: CGFloat = 25
+        static let nameCardOwnerTFLeadingInset: CGFloat = 16
+        static let cardNumberTFTopOffset: CGFloat = 25
+        static let cardNumberTFLeadingInset: CGFloat = 16
+        static let expDateTFTopOffset: CGFloat = 25
+        static let expDateTFLeadingInsrt: CGFloat = 16
+        static let cvvTextFieldTopOffset: CGFloat = 25
+        static let cvvTextFieldLeadingOffset: CGFloat = 25
+        static let cvvTextFieldTrailingInset: CGFloat = 16
+        static let addCardButtonTopOffset: CGFloat = 35
+        static let addCardButtonLeadingInset: CGFloat = 16
+        static let addCardButtonTrailingInset: CGFloat = 16
+        static let addCardButtonBottomOffset: CGFloat = -68
+    }
+    
 }

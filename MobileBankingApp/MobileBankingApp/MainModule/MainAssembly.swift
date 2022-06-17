@@ -9,7 +9,8 @@ import UIKit
 
 enum MainAssembly {
     static func build() -> MainViewController {
-        let presenter = MainPresenter(model: PaymentsCellModel(image: "", name: ""))
+        let router = MainRouter()
+        let presenter = MainPresenter(model: PaymentsCellModel(image: "", name: ""), router: router)
         let vc = MainViewController(presenter: presenter)
         return vc
     }

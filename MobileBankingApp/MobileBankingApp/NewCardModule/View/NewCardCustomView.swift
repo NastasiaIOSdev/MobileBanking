@@ -82,7 +82,7 @@ class  NewCardCustomView: UIView {
     }
 }
 
-// MARK: - SetupLayput & CommonData
+// MARK: - CommonData
 
 private extension NewCardCustomView {
     func setupUI() {
@@ -140,6 +140,11 @@ private extension NewCardCustomView {
         self.balanceLabel.textAlignment = .right
         self.balanceLabel.adjustsFontSizeToFitWidth = true
     }
+}
+
+// MARK: - Layout
+
+private extension NewCardCustomView {
     
     func setupLayout() {
         self.addSubview(self.cardLabel)

@@ -11,7 +11,6 @@ final class AccountTableViewCell: UITableViewCell {
    
 // MARK: - Property
     
-    static let identifier = "AccountTableViewCell"
     var cell: AccountCellModel? {
         didSet {
             guard let cell = cell else { return }
@@ -19,7 +18,11 @@ final class AccountTableViewCell: UITableViewCell {
             cellLabel.text = cell.name
         }
     }
+    
+    static let identifier = "AccountTableViewCell"
+ 
     private let accountCellViewImageView = UIImageView()
+    
     private let cellLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -27,6 +30,8 @@ final class AccountTableViewCell: UITableViewCell {
         label.textAlignment = .left
         return label
     }()
+    
+// MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

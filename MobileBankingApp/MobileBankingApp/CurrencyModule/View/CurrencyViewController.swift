@@ -12,7 +12,7 @@ final class CurrencyViewController: UIViewController {
     private var ui = CustomCurrencyView()
     private var presenter: ICurrencyPresenter?
     
-    // MARK: - Init
+// MARK: - Init
     
     init(presenter: ICurrencyPresenter) {
         super.init(nibName: nil, bundle: nil)
@@ -25,7 +25,8 @@ final class CurrencyViewController: UIViewController {
     override func loadView() {
         self.view = self.ui
     }
-    // MARK: - Life Cycles
+    
+// MARK: - Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,11 +8,13 @@
 import UIKit
 import SnapKit
 
-class CurrencyDateView: UIView {
+final class CurrencyDateView: UIView {
+    
     struct Settings {
         let label: String
         let date: String
     }
+    
 // MARK: - Property
     
     private enum Constraint {

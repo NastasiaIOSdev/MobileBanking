@@ -17,7 +17,7 @@ struct CurrencyModel {
 
 var currencyDataArray: [CurrencyModel] = [
     CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "EUR", name: "евро", value: "44"),
-    CurrencyModel(imageFlag: UIImage(named:  "EUR"), charCode: "USD", name: "доллар", value: "44"),
-    CurrencyModel(imageFlag: UIImage(named:  "EUR"), charCode: "CNY", name: "юань", value: "44"),
+    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "USD", name: "доллар", value: "44"),
+    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "CNY", name: "юань", value: "44"),
     CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "CAD", name: "кан.доллар", value: "22")
 ]

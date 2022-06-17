@@ -15,6 +15,7 @@
 		2E9F4920285B95F90024D7C4 /* CustomMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F491F285B95F90024D7C4 /* CustomMainView.swift */; };
 		2E9F4922285BA7120024D7C4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4921285BA7120024D7C4 /* MainPresenter.swift */; };
 		2E9F4924285BB9770024D7C4 /* NewCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */; };
+		2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4930285CD7750024D7C4 /* MainRouter.swift */; };
 		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D2C28599F200027220C /* CurrencyModel.swift */; };
 		2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D302859A9950027220C /* CalculyatorViewController.swift */; };
@@ -67,6 +68,7 @@
 		2E9F491F285B95F90024D7C4 /* CustomMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainView.swift; sourceTree = "<group>"; };
 		2E9F4921285BA7120024D7C4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardPresenter.swift; sourceTree = "<group>"; };
+		2E9F4930285CD7750024D7C4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		2EB29D2C28599F200027220C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		2EB29D302859A9950027220C /* CalculyatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorViewController.swift; sourceTree = "<group>"; };
 		2EB29D332859A9E00027220C /* CalculyatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorAssembly.swift; sourceTree = "<group>"; };
@@ -200,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */,
+				2E9F4921285BA7120024D7C4 /* MainPresenter.swift */,
+				2E9F4930285CD7750024D7C4 /* MainRouter.swift */,
 				2ECAC2F2284FA8C800320A1E /* Models */,
 				2ECAC2E2284F693E00320A1E /* View */,
 			);
@@ -222,8 +226,8 @@
 			children = (
 				2ECAC2DA284F5D1300320A1E /* AccountAssembly.swift */,
 				2EB29D3C2859F96E0027220C /* AccountCellModel.swift */,
-				2ECAC2E4284F695B00320A1E /* View */,
 				2E9F4915285B684A0024D7C4 /* AccountPresenter.swift */,
+				2ECAC2E4284F695B00320A1E /* View */,
 			);
 			path = AccountModule;
 			sourceTree = "<group>";
@@ -316,7 +320,6 @@
 			children = (
 				2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */,
 				2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */,
-				2E9F4921285BA7120024D7C4 /* MainPresenter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
 				2E9F491C285B80040024D7C4 /* CurrencyPresenter.swift in Sources */,
 				2E9F4918285B7F460024D7C4 /* CustomCurrencyView.swift in Sources */,
+				2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */,
 				2ECAC2DB284F5D1300320A1E /* AccountAssembly.swift in Sources */,
 				2ECAC2F0284FA7A700320A1E /* NewCardViewController.swift in Sources */,
 				2ECAC2D9284F5D0200320A1E /* CurrencyAssemly.swift in Sources */,
