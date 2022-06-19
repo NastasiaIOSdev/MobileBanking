@@ -14,18 +14,21 @@ protocol INewCardPresenter: AnyObject {
 final class NewCardPresenter: INewCardPresenter {
     
     weak var ui: ICustomNewCardView?
+    private let router: INewCardRouter
     
-    init() {
-        
+    init(router: INewCardRouter) {
+        self.router = router
     }
     
     func viewDidLoad(ui: ICustomNewCardView) {
         self.ui = ui
-        self.ui?.dismissButtonTappedActionHandler = {
-            //self.dismiss(animated: true)
+        self.ui?.dismissButtonTappedActionHandler = { [weak self] in
+            guard let self = self else { return }
+            self.router.dismissCardView()
         }
-        self.ui?.addCardButtonTappedActionHandler = {
-           //self.dismiss(animated: true)
+        self.ui?.addCardButtonTappedActionHandler = { [weak self] in
+            guard let self = self else { return }
+            self.router.addAndSaveCardView()
         }
     }
     

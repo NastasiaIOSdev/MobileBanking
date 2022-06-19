@@ -9,14 +9,14 @@ import UIKit
 import SnapKit
 
 protocol ICustomMainView: AnyObject {
-    var plusButtunTappedActionHandler: (() -> ())? { get set }
+    var plusButtunTappedActionHandler: (() -> Void)? { get set }
 }
 
 final class CustomMainView: UIView, ICustomMainView {
     
 // MARK: - Property
     
-    var plusButtunTappedActionHandler: (() -> ())?
+    var plusButtunTappedActionHandler: (() -> Void)?
     
     private var cell: [PaymentsCellModel] = paymentsDataArray
     

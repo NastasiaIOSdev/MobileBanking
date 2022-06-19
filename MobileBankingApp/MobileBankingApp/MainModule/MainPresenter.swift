@@ -14,11 +14,10 @@ protocol IMainPresenter: AnyObject {
 final class MainPresenter: IMainPresenter {
     
     weak var ui: ICustomMainView?
-    let model: PaymentsCellModel?
+    var model: PaymentsCellModel?
     private let router: IMainRouter
     
-    init(model: PaymentsCellModel, router: IMainRouter) {
-        self.model = model
+    init(router: IMainRouter) {
         self.router = router
     }
     
@@ -27,7 +26,6 @@ final class MainPresenter: IMainPresenter {
         self.ui?.plusButtunTappedActionHandler = { [weak self] in
             guard let self = self else { return }
             self.router.openNewCardView()
-           // self.present(NewCardAssembly.build(), animated: true)
         }
     }
 }

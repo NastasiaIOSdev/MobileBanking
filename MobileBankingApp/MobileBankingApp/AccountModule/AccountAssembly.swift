@@ -9,8 +9,11 @@ import UIKit
 
 enum AccountAssembly {
     static func biuld() -> AccountViewController {
-        let presenter = AccountPresenter(model: AccountCellModel())
+        let router = AccountRouter()
+        let presenter = AccountPresenter(router: router)
+        presenter.model = AccountCellModel(image: UIImage(named: ""), name: "")
         let vc = AccountViewController(presenter: presenter)
+        router.vc = vc
         return vc
     }
 }

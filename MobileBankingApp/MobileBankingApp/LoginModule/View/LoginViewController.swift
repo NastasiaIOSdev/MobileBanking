@@ -1,20 +1,18 @@
 //
-//  MainViewController.swift
+//  LoginViewController.swift
 //  MobileBankingApp
 //
-//  Created by Анастасия Ларина on 07.06.2022.
+//  Created by Анастасия Ларина on 19.06.2022.
 //
 
 import UIKit
 
-final class MainViewController: UIViewController {
-   
-    private var ui = CustomMainView()
-    private var presenter: IMainPresenter?
+class LoginViewController: UIViewController {
+
+    private var ui = CustomLoginView()
+    private var presenter: ILoginPresenter?
     
-    // MARK: - Init
-    
-    init(presenter: IMainPresenter) {
+    init(presenter: ILoginPresenter) {
         super.init(nibName: nil, bundle: nil)
         self.presenter = presenter
     }
@@ -28,10 +26,9 @@ final class MainViewController: UIViewController {
         self.view = self.ui
     }
     
-    // MARK: - Life Cycles
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.viewDidload(ui: self.ui)
+        self.presenter?.viewDidLoad(ui: self.ui)
+       
     }
 }

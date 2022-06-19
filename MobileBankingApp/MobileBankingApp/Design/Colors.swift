@@ -24,7 +24,7 @@ enum Colors {
         case .backgroundGray:
             return UIColor(red: 248/255, green: 248/255, blue: 258/255, alpha: 1)
         case .searchBarGray:
-            return UIColor(red: 118/255, green: 118/255, blue: 128/255, alpha: 0.12)
+            return UIColor(red: 118/255, green: 118/255, blue: 128/255, alpha: 0.012)
         case .currencylabel:
             return UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
         case .borderButton:

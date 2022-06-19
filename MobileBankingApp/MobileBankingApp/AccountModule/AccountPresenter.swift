@@ -14,16 +14,18 @@ protocol IAccountPresenter: AnyObject {
 final class AccountPresenter: IAccountPresenter {
 
     weak var ui: ICustomAccountView?
-    let model: AccountCellModel?
+    var model: AccountCellModel?
+    private let router: IAccountRouter
     
-    init(model: AccountCellModel) {
-        self.model = model
+    init(router: IAccountRouter) {
+        self.router = router
     }
     
     func viewDidLoad(ui: ICustomAccountView) {
         self.ui = ui
-        self.ui?.logoutButtonTapActionHandler = {
-          //  self.dismiss(animated: true)
+        self.ui?.logoutButtonTapActionHandler = { [weak self] in
+            guard let self = self else { return }
+            self.router.logoutButtonTap()
         }
     }
 }

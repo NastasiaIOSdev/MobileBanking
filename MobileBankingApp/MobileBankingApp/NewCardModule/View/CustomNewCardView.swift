@@ -179,7 +179,7 @@ private extension CustomNewCardView {
         static let expDateTFValueText = "09 / 24 "
         static let cvvTextFieldHeaderText = "CVV"
         static let cvvTextFieldValueText = "722"
-        static let addCardButtonLabelText = "Добавить"
+        static let addCardButtonLabelText = "Добавить карту"
     }
     
     private enum Constraints {
