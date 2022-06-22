@@ -18,6 +18,8 @@ final class CardCell: UICollectionViewCell {
         static let numberOfItemsInSection = 3
     }
     
+// MARK: - Property
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -55,6 +57,8 @@ private extension CardCell {
     }
 }
 
+// MARK: - CollectionView DelegateFlowLayout
+
 extension CardCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
@@ -62,6 +66,8 @@ extension CardCell: UICollectionViewDelegateFlowLayout {
             height: collectionView.frame.height)
     }
 }
+
+// MARK: - CollectionView DataSource & Delegate
 
 extension CardCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

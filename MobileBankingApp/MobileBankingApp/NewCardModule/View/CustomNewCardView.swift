@@ -19,6 +19,7 @@ final class CustomNewCardView: UIView, ICustomNewCardView {
     // MARK: - Propery
     
     private let scrolView = UIScrollView()
+    private let view = UIView()
     
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
         label: Texts.pageLabelText,
@@ -35,12 +36,14 @@ final class CustomNewCardView: UIView, ICustomNewCardView {
     private let cardView = UIView()
     private let customCardViewImage = UIImageView()
     private let customCardView = NewCardCustomView(settings: .init(
+        logoBankImage: Constants.logoBankImage,
+        chipImage: Constants.chipImage,
         cardNumberLabel: Texts.cardNamberLabelText,
+        cardHolderLabel: Texts.cardHolderLabelText,
+        cardHolderNameLabel: Texts.nameCardOwnerTFvalueText,
         expareDateLabel: Texts.expareDateLabelTaxt,
         expareDateNumbersLabel: Texts.expareDateNumbersLabelText,
-        typeCardImage: Constants.typeCardImage,
-        availableBalanceLabel: Constants.availableBalanceLabelText,
-        balanceLabel: Texts.balanceLabelText))
+        typeCardImage: Constants.typeCardImage))
     
     private let nameCardOwnerTF = OwnerCardTextFieldView(settings: .init(
         header: Texts.nameCardOwnerTFHeaderText,
@@ -90,13 +93,21 @@ private extension CustomNewCardView {
             make.edges.equalTo(self.safeAreaLayoutGuide)
         }
         
-        self.scrolView.addSubview(self.pageLabel)
+        self.scrolView.addSubview(self.view)
+        self.view.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.width.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        self.view.addSubview(self.pageLabel)
         self.pageLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(Constraints.pageLabelTopOffset)
             make.leading.trailing.equalToSuperview().inset(Constraints.pageLabelLeadingInset)
         }
         
-        self.scrolView.addSubview(self.cardView)
+        self.view.addSubview(self.cardView)
         self.cardView.snp.makeConstraints { make in
             make.top.equalTo(self.pageLabel.snp.bottom).offset(Constraints.cardViewTopOffset)
             make.centerX.equalToSuperview()
@@ -118,32 +129,32 @@ private extension CustomNewCardView {
             make.trailing.equalToSuperview().inset(Constraints.customCardViewTrailingInset)
         }
         
-        self.scrolView.addSubview(self.nameCardOwnerTF)
+        self.view.addSubview(self.nameCardOwnerTF)
         self.nameCardOwnerTF.snp.makeConstraints { make in
             make.top.equalTo(self.cardView.snp.bottom).offset(Constraints.nameCardOwnerTFTopOffset)
             make.leading.trailing.equalToSuperview().inset(Constraints.nameCardOwnerTFLeadingInset)
         }
         
-        self.scrolView.addSubview(self.cardNumberTF)
+        self.view.addSubview(self.cardNumberTF)
         self.cardNumberTF.snp.makeConstraints { make in
             make.top.equalTo(self.nameCardOwnerTF.snp.bottom).offset(Constraints.cardNumberTFTopOffset)
             make.leading.trailing.equalToSuperview().inset(Constraints.cardNumberTFLeadingInset)
         }
         
-        self.scrolView.addSubview(self.expDateTF)
+        self.view.addSubview(self.expDateTF)
         self.expDateTF.snp.makeConstraints { make in
             make.top.equalTo(self.cardNumberTF.snp.bottom).offset(Constraints.expDateTFTopOffset)
             make.leading.equalToSuperview().inset(Constraints.expDateTFLeadingInsrt)
         }
         
-        self.scrolView.addSubview(self.cvvTextField)
+        self.view.addSubview(self.cvvTextField)
         self.cvvTextField.snp.makeConstraints { make in
             make.top.equalTo(self.cardNumberTF.snp.bottom).offset(Constraints.cvvTextFieldTopOffset)
             make.leading.equalTo(self.expDateTF.snp.trailing).offset(Constraints.cvvTextFieldLeadingOffset)
             make.trailing.equalToSuperview().inset(Constraints.cvvTextFieldTrailingInset)
         }
         
-        self.scrolView.addSubview(self.addCardButton)
+        self.view.addSubview(self.addCardButton)
         self.addCardButton.snp.makeConstraints { make in
             make.top.equalTo(self.expDateTF.snp.bottom).offset(Constraints.addCardButtonTopOffset)
             make.leading.equalToSuperview().inset(Constraints.addCardButtonLeadingInset)
@@ -159,6 +170,8 @@ private extension CustomNewCardView {
     private enum Constants {
         static let pageLabelImage = "cross_btn"
         static let typeCardImage = "mc_symbol 4"
+        static let logoBankImage = "logo_on_card"
+        static let chipImage = "chip"
         static let availableBalanceLabelText = "Card holder"
         static let cardViewHeight = 216
         static let cardViewWith = 340
@@ -168,9 +181,9 @@ private extension CustomNewCardView {
     private enum Texts {
         static let pageLabelText = "Добавить Карту"
         static let cardNamberLabelText = "* * * *  * * * *  * * * *  4568"
-        static let expareDateLabelTaxt = "Card holder"
-        static let expareDateNumbersLabelText = "Card holder"
-        static let balanceLabelText = "Card holder"
+        static let expareDateLabelTaxt = "Expiry Date"
+        static let expareDateNumbersLabelText = "09/24"
+        static let cardHolderLabelText = "Card holder"
         static let nameCardOwnerTFHeaderText = "Имя владельца карты"
         static let nameCardOwnerTFvalueText = "Ivanov Ivan"
         static let cardNumberTFHeaderText = "Номер карты"

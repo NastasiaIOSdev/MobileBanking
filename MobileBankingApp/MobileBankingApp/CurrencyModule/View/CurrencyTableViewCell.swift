@@ -25,13 +25,15 @@ final class CurrencyTableViewCell: UITableViewCell {
     
 // MARK: - Property
     
-    var cell: CurrencyModel? {
+    var model: CurrencyModel? {
         didSet {
-            guard let cell = cell else { return }
-            currenyImageView.image = cell.imageFlag
-            charCodeLabel.text = cell.charCode
-            nameLabel.text = cell.name
-            valueLabel.text = cell.value
+            guard let model = model else { return }
+            
+            charCodeLabel.text = model.charCode
+            valueLabel.text = model.value
+            
+            //currenyImageView.image = cell.imageFlag
+            //nameLabel.text = cell.name
         }
     }
     

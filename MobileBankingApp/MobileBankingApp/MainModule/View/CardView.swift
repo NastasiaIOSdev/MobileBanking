@@ -36,6 +36,8 @@ final class  CardView: UIView {
             self.balanceLabel = balanceLabel
         }
     }
+
+// MARK: - Property
     
     private let cardNumberLabel = UILabel()
     private let cardLabel = UILabel()
@@ -44,17 +46,20 @@ final class  CardView: UIView {
     private let typeCardImage = UIImageView()
     private let avBalanceLabel = UILabel()
     private let balanceLabel = UILabel()
+
+// MARK: - Init
     
     init(settings: Settings) {
         super.init(frame: .zero)
         self.configureView(with: settings)
-        self.setupUI()
+        self.setupCommonData()
+        self.setupLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func configureView(with settings: Settings) {
         self.cardLabel.text = settings.cardNumberLabel
         self.expDateLabel.text = settings.expareDateLabel
@@ -65,11 +70,9 @@ final class  CardView: UIView {
     }
 }
 
+// MARK: - Setup CommonData
+
 private extension CardView {
-    func setupUI() {
-        self.setupCommonData()
-        self.setupLayout()
-    }
     
     func setupCommonData() {
         self.setupCardLabel()
@@ -119,7 +122,12 @@ private extension CardView {
         self.balanceLabel.textAlignment = .right
         self.balanceLabel.adjustsFontSizeToFitWidth = true
     }
-    
+}
+
+// MARK: - Setup Layout
+
+private extension CardView {
+   
     func setupLayout() {
         self.addSubview(self.cardLabel)
         self.cardLabel.snp.makeConstraints { make in

@@ -11,54 +11,60 @@ import SnapKit
 
 class  NewCardCustomView: UIView {
 
-// MARK: = View Settings
+// MARK: - View Settings
     
     struct Settings {
-        let cardNumberLabel: String
+        let logoBankImage: String
+        let chipImage: String
+        var cardNumberLabel: String
+        let cardHolderLabel: String
+        let cardHolderNameLabel: String
         let expareDateLabel: String
         let expareDateNumbersLabel: String
         let typeCardImage: String
-        let availableBalanceLabel: String
-        let balanceLabel: String
         
         init(
+            logoBankImage: String,
+            chipImage: String,
             cardNumberLabel: String,
+            cardHolderLabel: String,
+            cardHolderNameLabel: String,
             expareDateLabel: String,
             expareDateNumbersLabel: String,
-            typeCardImage: String,
-            availableBalanceLabel: String,
-            balanceLabel: String) {
+            typeCardImage: String) {
+                self.logoBankImage = logoBankImage
                 self.cardNumberLabel = cardNumberLabel
+                self.chipImage = chipImage
+                self.cardHolderLabel = cardHolderLabel
+                self.cardHolderNameLabel = cardHolderNameLabel
                 self.expareDateLabel = expareDateLabel
                 self.expareDateNumbersLabel = expareDateNumbersLabel
                 self.typeCardImage = typeCardImage
-                self.availableBalanceLabel = availableBalanceLabel
-                self.balanceLabel = balanceLabel
             }
     }
 
 // MARK: - Constraints
     
     private enum Constraints {
-        static let cardLabelLeadingOffset: CGFloat = 7
-        static let expDateLabelTopOffset : CGFloat = 16
+        static let cardLabelTopOffset: CGFloat = 7
+        static let cardHolderLabelTopOffset: CGFloat = 41
+        static let cardHolderNameLabelTopOffset: CGFloat = 4
+        static let expViewTopOffset: CGFloat = 41
+        static let expViewLeadingOffset: CGFloat = 65
         static let expDateNumLabelTopOffset: CGFloat = 4
-        static let typeCardImageTopOffset: CGFloat = 18
-        static let avBalanceLabelTopOffset: CGFloat = 25
-        static let balanceLabelTopOffset: CGFloat = 8
     }
     
 // MARK: - Property
     
-    private let cardView = UIView()
-    private let cardMainImage = UIImageView()
-    private let cardNumberLabel = UILabel()
+    private let logoBankImage = UIImageView()
     private let cardLabel = UILabel()
+    private let chipImage = UIImageView()
+    private let cardHolderLabel = UILabel()
+    private let cardHolderNameLabel = UILabel()
+    private let expView = UIView()
     private let expDateLabel = UILabel()
     private let expDateNumLabel = UILabel()
     private let typeCardImage = UIImageView()
-    private let avBalanceLabel = UILabel()
-    private let balanceLabel = UILabel()
     
 // MARK: - Init
     
@@ -77,8 +83,10 @@ class  NewCardCustomView: UIView {
         self.expDateLabel.text = settings.expareDateLabel
         self.expDateNumLabel.text = settings.expareDateNumbersLabel
         self.typeCardImage.image = UIImage(named: settings.typeCardImage)
-        self.avBalanceLabel.text = settings.availableBalanceLabel
-        self.balanceLabel.text = settings.balanceLabel
+        self.logoBankImage.image = UIImage(named: settings.logoBankImage)
+        self.chipImage.image = UIImage(named: settings.chipImage)
+        self.cardHolderLabel.text = settings.cardHolderLabel
+        self.cardHolderNameLabel.text = settings.cardHolderNameLabel
     }
 }
 
@@ -91,14 +99,22 @@ private extension NewCardCustomView {
     }
     
     func setupCommonData() {
-        self.cardView.backgroundColor = .purple
-        
+        self.setupLogoImage()
+        self.setupChipImage()
         self.setupCardLabel()
+        self.setupCardHolderLabel()
+        self.setupcardHolderNameLabel()
         self.setupexpDateLabel()
         self.setupexpDateNumLabel()
         self.setuptypeCardImage()
-        self.setupavBalaceLabel()
-        self.setupBalaceLabel()
+      
+    }
+    func setupLogoImage() {
+        self.logoBankImage.contentMode = .scaleAspectFill
+    }
+    
+    func setupChipImage() {
+        self.chipImage.contentMode = .scaleAspectFill
     }
     
     func setupCardLabel() {
@@ -106,6 +122,20 @@ private extension NewCardCustomView {
         self.cardLabel.textAlignment = .left
         self.cardLabel.adjustsFontSizeToFitWidth = true
         self.cardLabel.textColor = .white
+    }
+    
+    func setupCardHolderLabel() {
+        self.cardHolderLabel.font = AppFonts.regular14.font
+        self.cardHolderLabel.textAlignment = .left
+        self.cardHolderLabel.adjustsFontSizeToFitWidth = true
+        self.cardHolderLabel.textColor = .white
+    }
+    
+    func setupcardHolderNameLabel() {
+        self.cardHolderNameLabel.font = AppFonts.light14.font
+        self.cardHolderNameLabel.textAlignment = .left
+        self.cardHolderNameLabel.adjustsFontSizeToFitWidth = true
+        self.cardHolderNameLabel.textColor = .white
     }
     
     func setupexpDateLabel() {
@@ -125,21 +155,6 @@ private extension NewCardCustomView {
     func setuptypeCardImage() {
         self.typeCardImage.contentMode = .scaleAspectFill
     }
-    
-    func setupavBalaceLabel() {
-        self.avBalanceLabel.font = AppFonts.light14.font
-        self.avBalanceLabel.textColor = .white
-        self.avBalanceLabel.numberOfLines = 2
-        self.avBalanceLabel.textAlignment = .right
-        self.avBalanceLabel.adjustsFontSizeToFitWidth = true
-    }
-    
-    func setupBalaceLabel() {
-        self.balanceLabel.font = AppFonts.bold22.font
-        self.balanceLabel.textColor = .white
-        self.balanceLabel.textAlignment = .right
-        self.balanceLabel.adjustsFontSizeToFitWidth = true
-    }
 }
 
 // MARK: - Layout
@@ -147,40 +162,60 @@ private extension NewCardCustomView {
 private extension NewCardCustomView {
     
     func setupLayout() {
-        self.addSubview(self.cardLabel)
-        self.cardLabel.snp.makeConstraints { make in
+        self.addSubview(self.logoBankImage)
+        self.logoBankImage.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.leading.equalToSuperview().offset(Constraints.cardLabelLeadingOffset)
-        }
-        
-        self.addSubview(self.expDateLabel)
-        self.expDateLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.cardLabel.snp.bottom).offset(Constraints.expDateLabelTopOffset)
             make.leading.equalToSuperview()
         }
         
-        self.addSubview(self.expDateNumLabel)
+        self.addSubview(self.chipImage)
+        self.chipImage.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
+        
+        self.addSubview(self.cardLabel)
+        self.cardLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(Constraints.cardLabelTopOffset)
+        }
+        
+        self.addSubview(self.cardHolderLabel)
+        self.cardHolderLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.cardLabel.snp.bottom).offset(Constraints.cardHolderLabelTopOffset)
+            make.leading.equalToSuperview()
+        }
+        
+        self.addSubview(self.cardHolderNameLabel)
+        self.cardHolderNameLabel.snp.makeConstraints { make in
+            make.top.equalTo(self.cardHolderLabel.snp.bottom).offset(Constraints.cardHolderNameLabelTopOffset)
+            make.leading.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+        
+        self.addSubview(self.expView)
+        self.expView.snp.makeConstraints { make in
+            make.top.equalTo(self.cardLabel.snp.bottom).offset(Constraints.expViewTopOffset)
+            make.leading.equalTo(self.cardHolderLabel.snp.trailing).offset(Constraints.expViewLeadingOffset)
+        }
+        
+        self.expView.addSubview(self.expDateLabel)
+        self.expDateLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+        }
+        
+        self.expView.addSubview(self.expDateNumLabel)
         self.expDateNumLabel.snp.makeConstraints { make in
             make.top.equalTo(self.expDateLabel.snp.bottom).offset(Constraints.expDateNumLabelTopOffset)
             make.leading.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
         
         self.addSubview(self.typeCardImage)
         self.typeCardImage.snp.makeConstraints { make in
-            make.top.equalTo(self.expDateNumLabel.snp.bottom).offset(Constraints.typeCardImageTopOffset)
-            make.leading.equalToSuperview()
-        }
-        
-        self.addSubview(self.avBalanceLabel)
-        self.avBalanceLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.cardLabel.snp.bottom).offset(Constraints.avBalanceLabelTopOffset)
             make.trailing.equalToSuperview()
-        }
-        
-        self.addSubview(self.balanceLabel)
-        self.balanceLabel.snp.makeConstraints { make in
-            make.top.equalTo(self.avBalanceLabel.snp.bottom).offset(Constraints.balanceLabelTopOffset)
-            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 }

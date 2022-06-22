@@ -30,7 +30,10 @@ final class CurrencyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.presenter?.viewDidLoad(ui: self.ui)
+        
+        self.presenter?.viewDidLoad(ui: self.ui) { currencies in
+            self.ui.currencies = currencies
+        }
     }
 }
 

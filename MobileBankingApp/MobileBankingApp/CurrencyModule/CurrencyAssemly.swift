@@ -9,7 +9,7 @@ import UIKit
 
 enum CurrencyAssemly {
     static func build() -> CurrencyViewController {
-        let presenter = CurrencyPresenter(model: CurrencyModel(imageFlag: UIImage(named: ""), charCode: "", name: "", value: ""))
+        let presenter = CurrencyPresenter()
         let vc = CurrencyViewController(presenter: presenter)
         return vc
     }

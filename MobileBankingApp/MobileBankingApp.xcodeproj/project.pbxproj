@@ -16,7 +16,6 @@
 		2E9F4922285BA7120024D7C4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4921285BA7120024D7C4 /* MainPresenter.swift */; };
 		2E9F4924285BB9770024D7C4 /* NewCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */; };
 		2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4930285CD7750024D7C4 /* MainRouter.swift */; };
-		2E9F4933285DA6810024D7C4 /* NetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4932285DA6810024D7C4 /* NetService.swift */; };
 		2EA59D3C285F3FAD008EF7BE /* NewCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D3B285F3FAD008EF7BE /* NewCardRouter.swift */; };
 		2EA59D3F285F4829008EF7BE /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D3E285F4829008EF7BE /* LoginAssembly.swift */; };
 		2EA59D41285F4844008EF7BE /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D40285F4844008EF7BE /* LoginRouter.swift */; };
@@ -24,6 +23,12 @@
 		2EA59D46285F48AE008EF7BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D45285F48AE008EF7BE /* LoginViewController.swift */; };
 		2EA59D48285F48F1008EF7BE /* CustomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D47285F48F1008EF7BE /* CustomLoginView.swift */; };
 		2EA59D4A285F7C59008EF7BE /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D49285F7C59008EF7BE /* AccountRouter.swift */; };
+		2EA59D55286259AE008EF7BE /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */; };
+		2EA59D7B2862E625008EF7BE /* CurrencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */; };
+		2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */; };
+		2EA59D8028634DDA008EF7BE /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */; };
+		2EA59D8128634DDA008EF7BE /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */; };
+		2EA59D8328634E2F008EF7BE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */; };
 		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D2C28599F200027220C /* CurrencyModel.swift */; };
 		2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D302859A9950027220C /* CalculyatorViewController.swift */; };
@@ -60,7 +65,6 @@
 		2ECAC2EE284FA79100320A1E /* NewCardAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */; };
 		2ECAC2F0284FA7A700320A1E /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */; };
 		2ECAC2F4284FA8E900320A1E /* PaymentsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */; };
-		2ECAC2F6284FA8FC00320A1E /* CardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */; };
 		2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2F8284FB05100320A1E /* CardCell.swift */; };
 		2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2FA284FB06200320A1E /* CardCollectionViewCell.swift */; };
 		2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2FC284FB07500320A1E /* PaymentsCollectionViewCell.swift */; };
@@ -77,7 +81,6 @@
 		2E9F4921285BA7120024D7C4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardPresenter.swift; sourceTree = "<group>"; };
 		2E9F4930285CD7750024D7C4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		2E9F4932285DA6810024D7C4 /* NetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetService.swift; sourceTree = "<group>"; };
 		2EA59D3B285F3FAD008EF7BE /* NewCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardRouter.swift; sourceTree = "<group>"; };
 		2EA59D3E285F4829008EF7BE /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		2EA59D40285F4844008EF7BE /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -85,6 +88,12 @@
 		2EA59D45285F48AE008EF7BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2EA59D47285F48F1008EF7BE /* CustomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginView.swift; sourceTree = "<group>"; };
 		2EA59D49285F7C59008EF7BE /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
+		2EA59D54286259AE008EF7BE /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDTO.swift; sourceTree = "<group>"; };
+		2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2EB29D2C28599F200027220C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		2EB29D302859A9950027220C /* CalculyatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorViewController.swift; sourceTree = "<group>"; };
 		2EB29D332859A9E00027220C /* CalculyatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorAssembly.swift; sourceTree = "<group>"; };
@@ -122,7 +131,6 @@
 		2ECAC2ED284FA79100320A1E /* NewCardAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardAssembly.swift; sourceTree = "<group>"; };
 		2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
 		2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCellModel.swift; sourceTree = "<group>"; };
-		2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellModel.swift; sourceTree = "<group>"; };
 		2ECAC2F8284FB05100320A1E /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		2ECAC2FA284FB06200320A1E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		2ECAC2FC284FB07500320A1E /* PaymentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -159,6 +167,26 @@
 				2EA59D47285F48F1008EF7BE /* CustomLoginView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2EA59D7928625A54008EF7BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2EA59D84286369ED008EF7BE /* CoreData */,
+				2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */,
+				2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */,
+				2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2EA59D84286369ED008EF7BE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */,
+				2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		2EB29D322859A9A20027220C /* CalculyatorModule */ = {
@@ -210,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
+				2EA59D7928625A54008EF7BE /* Services */,
 				2ECAC2C3284F46FA00320A1E /* Tabbar */,
 				2EA59D3D285F4801008EF7BE /* LoginModule */,
 				2ECAC2C0284F468B00320A1E /* MainModule */,
@@ -219,6 +248,7 @@
 				2EB29D3B2859D09E0027220C /* Converter */,
 				2ECAC2BF284F467E00320A1E /* Design */,
 				2ECAC2B9284F44B800320A1E /* Info.plist */,
+				2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */,
 			);
 			path = MobileBankingApp;
 			sourceTree = "<group>";
@@ -284,7 +314,6 @@
 				2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */,
 				2ECAC2AB284F44B400320A1E /* AppDelegate.swift */,
 				2ECAC2B6284F44B800320A1E /* LaunchScreen.storyboard */,
-				2E9F4932285DA6810024D7C4 /* NetService.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -359,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */,
-				2ECAC2F5284FA8FC00320A1E /* CardCellModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,10 +489,11 @@
 				2EB29D4A285A5CFA0027220C /* CustomButtonView.swift in Sources */,
 				2EB29D3D2859F96E0027220C /* AccountCellModel.swift in Sources */,
 				2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */,
+				2EA59D8328634E2F008EF7BE /* CoreDataManager.swift in Sources */,
+				2EA59D8028634DDA008EF7BE /* Currency+CoreDataClass.swift in Sources */,
 				2E9F4920285B95F90024D7C4 /* CustomMainView.swift in Sources */,
 				2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */,
 				2ECAC2C8284F4DA000320A1E /* Colors.swift in Sources */,
-				2ECAC2F6284FA8FC00320A1E /* CardCellModel.swift in Sources */,
 				2ECAC2E1284F5EAD00320A1E /* TabbarAssembly.swift in Sources */,
 				2ECAC2F4284FA8E900320A1E /* PaymentsCellModel.swift in Sources */,
 				2EA59D46285F48AE008EF7BE /* LoginViewController.swift in Sources */,
@@ -483,8 +512,10 @@
 				2ECAC2DD284F5D2700320A1E /* CurrencyViewController.swift in Sources */,
 				2E9F4916285B684A0024D7C4 /* AccountPresenter.swift in Sources */,
 				2EA59D48285F48F1008EF7BE /* CustomLoginView.swift in Sources */,
+				2EA59D55286259AE008EF7BE /* Data.xcdatamodeld in Sources */,
 				2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */,
 				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
+				2EA59D8128634DDA008EF7BE /* Currency+CoreDataProperties.swift in Sources */,
 				2E9F491C285B80040024D7C4 /* CurrencyPresenter.swift in Sources */,
 				2E9F4918285B7F460024D7C4 /* CustomCurrencyView.swift in Sources */,
 				2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */,
@@ -501,9 +532,10 @@
 				2ECAC2D5284F5CCA00320A1E /* MainViewController.swift in Sources */,
 				2EA59D4A285F7C59008EF7BE /* AccountRouter.swift in Sources */,
 				2EA59D3C285F3FAD008EF7BE /* NewCardRouter.swift in Sources */,
+				2EA59D7B2862E625008EF7BE /* CurrencyDTO.swift in Sources */,
 				2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */,
-				2E9F4933285DA6810024D7C4 /* NetService.swift in Sources */,
 				2EB29D342859A9E00027220C /* CalculyatorAssembly.swift in Sources */,
+				2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */,
 				2EB29D48285A48820027220C /* CardNumberTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +765,19 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EA59D54286259AE008EF7BE /* Data.xcdatamodel */,
+			);
+			currentVersion = 2EA59D54286259AE008EF7BE /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2ECAC2A0284F44B400320A1E /* Project object */;
 }

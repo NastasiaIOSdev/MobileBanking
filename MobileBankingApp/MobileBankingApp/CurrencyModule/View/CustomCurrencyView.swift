@@ -17,7 +17,11 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
     
     var calcButtonTapActionhandler: (() -> ())?
     
-    private var cell: [CurrencyModel] = currencyDataArray
+    var currencies = [CurrencyModel]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
         label: Texts.pageLabelText,
@@ -124,12 +128,12 @@ private extension CustomCurrencyView {
 
 extension CustomCurrencyView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencyDataArray.count
+        return currencies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.identifier, for: indexPath) as? CurrencyTableViewCell else { return UITableViewCell()}
-        cell.cell = currencyDataArray[indexPath.row]
+        cell.model = currencies[indexPath.row]
         return cell
     }
     

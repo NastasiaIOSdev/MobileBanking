@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 final class  MainGreetingView: UIView {
+
+//MARK: - Settings
     
     struct Settings {
         let image: String
@@ -31,10 +33,14 @@ final class  MainGreetingView: UIView {
     private enum Constraints {
         static let topBottomInset = 5
     }
+
+// MARK: - Property
     
     private let imageView = UIImageView()
     private let greetingLabel = UILabel()
     private let userLabel = UILabel()
+
+// MARK: - Init
     
     init(settings: Settings) {
         super.init(frame: .zero)
@@ -52,6 +58,8 @@ final class  MainGreetingView: UIView {
         self.userLabel.text = setting.user
     }
 }
+
+// MARK: - Setup Layout & CommonData
 
 private extension MainGreetingView {
     func setupUI() {
