@@ -11,23 +11,18 @@ import UIKit
 struct CurrencyModel {
     //var imageFlag: UIImage?
     var charCode: String?
-    //var name: String?
+    var name: String?
     var value: String?
     
-    init(code: String, value: String) {
+    init(code: String, name: String, value: String) {
         self.charCode = code
+        self.name = name
         self.value = value
     }
     
     init(withResponseDataValute valute: Valute) {
         self.charCode = valute.charCode
+        self.name = valute.name
         self.value = String(format: "%.2f", valute.value) 
     }
 }
-
-//var currencyDataArray: [CurrencyModel] = [
-//    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "EUR", name: "евро", value: "44"),
-//    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "USD", name: "доллар", value: "44"),
-//    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "CNY", name: "юань", value: "44"),
-//    CurrencyModel(imageFlag: UIImage(named: "EUR"), charCode: "CAD", name: "кан.доллар", value: "22")
-//]

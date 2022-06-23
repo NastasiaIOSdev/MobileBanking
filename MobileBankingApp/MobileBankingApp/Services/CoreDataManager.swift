@@ -29,12 +29,13 @@ final class CoreDataManager {
         valutes.forEach { valute in
             let currency = Currency(context: context)
             currency.value = Double(valute.value ?? "") ?? 0
+            currency.name = valute.name
             currency.code = valute.charCode
         }
         appDelegate.saveContext()
     }
     
     func getValutes() -> [CurrencyModel] {
-        fetch().map({CurrencyModel(code: $0.code ?? "", value: String($0.value))})
+        fetch().map({CurrencyModel(code: $0.code ?? "",name: $0.name ?? "", value: String($0.value))})
     }
 }

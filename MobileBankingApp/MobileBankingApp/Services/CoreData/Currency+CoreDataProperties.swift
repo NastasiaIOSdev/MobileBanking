@@ -2,7 +2,7 @@
 //  Currency+CoreDataProperties.swift
 //  MobileBankingApp
 //
-//  Created by Анастасия Ларина on 22.06.2022.
+//  Created by Анастасия Ларина on 23.06.2022.
 //
 //
 
@@ -16,8 +16,9 @@ extension Currency {
         return NSFetchRequest<Currency>(entityName: "Currency")
     }
 
-    @NSManaged public var value: Double
     @NSManaged public var code: String?
+    @NSManaged public var value: Double
+    @NSManaged public var name: String?
 
 }
 

@@ -16,6 +16,8 @@
 		2E9F4922285BA7120024D7C4 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4921285BA7120024D7C4 /* MainPresenter.swift */; };
 		2E9F4924285BB9770024D7C4 /* NewCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */; };
 		2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F4930285CD7750024D7C4 /* MainRouter.swift */; };
+		2EA55E4728639F19004D6BC4 /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA55E4528639F19004D6BC4 /* Currency+CoreDataClass.swift */; };
+		2EA55E4828639F19004D6BC4 /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA55E4628639F19004D6BC4 /* Currency+CoreDataProperties.swift */; };
 		2EA59D3C285F3FAD008EF7BE /* NewCardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D3B285F3FAD008EF7BE /* NewCardRouter.swift */; };
 		2EA59D3F285F4829008EF7BE /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D3E285F4829008EF7BE /* LoginAssembly.swift */; };
 		2EA59D41285F4844008EF7BE /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D40285F4844008EF7BE /* LoginRouter.swift */; };
@@ -26,8 +28,6 @@
 		2EA59D55286259AE008EF7BE /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */; };
 		2EA59D7B2862E625008EF7BE /* CurrencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */; };
 		2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */; };
-		2EA59D8028634DDA008EF7BE /* Currency+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */; };
-		2EA59D8128634DDA008EF7BE /* Currency+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */; };
 		2EA59D8328634E2F008EF7BE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */; };
 		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D2C28599F200027220C /* CurrencyModel.swift */; };
@@ -81,6 +81,8 @@
 		2E9F4921285BA7120024D7C4 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		2E9F4923285BB9770024D7C4 /* NewCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardPresenter.swift; sourceTree = "<group>"; };
 		2E9F4930285CD7750024D7C4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		2EA55E4528639F19004D6BC4 /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2EA55E4628639F19004D6BC4 /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2EA59D3B285F3FAD008EF7BE /* NewCardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardRouter.swift; sourceTree = "<group>"; };
 		2EA59D3E285F4829008EF7BE /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		2EA59D40285F4844008EF7BE /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		2EA59D54286259AE008EF7BE /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDTO.swift; sourceTree = "<group>"; };
 		2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2EB29D2C28599F200027220C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		2EB29D302859A9950027220C /* CalculyatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorViewController.swift; sourceTree = "<group>"; };
@@ -183,8 +183,8 @@
 		2EA59D84286369ED008EF7BE /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				2EA59D7E28634DD9008EF7BE /* Currency+CoreDataClass.swift */,
-				2EA59D7F28634DD9008EF7BE /* Currency+CoreDataProperties.swift */,
+				2EA55E4528639F19004D6BC4 /* Currency+CoreDataClass.swift */,
+				2EA55E4628639F19004D6BC4 /* Currency+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -490,7 +490,6 @@
 				2EB29D3D2859F96E0027220C /* AccountCellModel.swift in Sources */,
 				2EB29D312859A9950027220C /* CalculyatorViewController.swift in Sources */,
 				2EA59D8328634E2F008EF7BE /* CoreDataManager.swift in Sources */,
-				2EA59D8028634DDA008EF7BE /* Currency+CoreDataClass.swift in Sources */,
 				2E9F4920285B95F90024D7C4 /* CustomMainView.swift in Sources */,
 				2ECAC2FD284FB07500320A1E /* PaymentsCollectionViewCell.swift in Sources */,
 				2ECAC2C8284F4DA000320A1E /* Colors.swift in Sources */,
@@ -502,6 +501,7 @@
 				2EB29D46285A483D0027220C /* OwnerCardTextFieldView.swift in Sources */,
 				2ECAC2FB284FB06200320A1E /* CardCollectionViewCell.swift in Sources */,
 				2EA59D3F285F4829008EF7BE /* LoginAssembly.swift in Sources */,
+				2EA55E4728639F19004D6BC4 /* Currency+CoreDataClass.swift in Sources */,
 				2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */,
 				2E9F491E285B8C3B0024D7C4 /* CustomNewCardView.swift in Sources */,
 				2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */,
@@ -515,7 +515,6 @@
 				2EA59D55286259AE008EF7BE /* Data.xcdatamodeld in Sources */,
 				2ECAC2D7284F5CE000320A1E /* MainAssembly.swift in Sources */,
 				2ECAC2DF284F5D3500320A1E /* AccountViewController.swift in Sources */,
-				2EA59D8128634DDA008EF7BE /* Currency+CoreDataProperties.swift in Sources */,
 				2E9F491C285B80040024D7C4 /* CurrencyPresenter.swift in Sources */,
 				2E9F4918285B7F460024D7C4 /* CustomCurrencyView.swift in Sources */,
 				2E9F4931285CD7750024D7C4 /* MainRouter.swift in Sources */,
@@ -526,6 +525,7 @@
 				2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */,
 				2EA59D43285F4865008EF7BE /* LoginPresenter.swift in Sources */,
 				2EB29D3F2859FCB80027220C /* AccountTableViewCell.swift in Sources */,
+				2EA55E4828639F19004D6BC4 /* Currency+CoreDataProperties.swift in Sources */,
 				2ECAC2E6284F6E9100320A1E /* MainGreetingView.swift in Sources */,
 				2EB29D44285A16330027220C /* NewCardCustomView.swift in Sources */,
 				2E9F4922285BA7120024D7C4 /* MainPresenter.swift in Sources */,

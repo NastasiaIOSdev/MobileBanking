@@ -31,7 +31,7 @@ final class CurrencyTableViewCell: UITableViewCell {
             
             charCodeLabel.text = model.charCode
             valueLabel.text = model.value
-            
+            nameLabel.text = model.name
             //currenyImageView.image = cell.imageFlag
             //nameLabel.text = cell.name
         }
