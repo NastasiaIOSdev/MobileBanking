@@ -40,7 +40,6 @@
 		2EB29D3F2859FCB80027220C /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D3E2859FCB80027220C /* AccountTableViewCell.swift */; };
 		2EB29D44285A16330027220C /* NewCardCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D43285A16330027220C /* NewCardCustomView.swift */; };
 		2EB29D46285A483D0027220C /* OwnerCardTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */; };
-		2EB29D48285A48820027220C /* CardNumberTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */; };
 		2EB29D4A285A5CFA0027220C /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D49285A5CFA0027220C /* CustomButtonView.swift */; };
 		2ECAC2AC284F44B400320A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AB284F44B400320A1E /* AppDelegate.swift */; };
 		2ECAC2AE284F44B400320A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECAC2AD284F44B400320A1E /* SceneDelegate.swift */; };
@@ -104,7 +103,6 @@
 		2EB29D3E2859FCB80027220C /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		2EB29D43285A16330027220C /* NewCardCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardCustomView.swift; sourceTree = "<group>"; };
 		2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerCardTextFieldView.swift; sourceTree = "<group>"; };
-		2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNumberTextFieldView.swift; sourceTree = "<group>"; };
 		2EB29D49285A5CFA0027220C /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		2ECAC2A8284F44B400320A1E /* MobileBankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileBankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECAC2AB284F44B400320A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				2ECAC2EF284FA7A700320A1E /* NewCardViewController.swift */,
 				2EB29D43285A16330027220C /* NewCardCustomView.swift */,
 				2EB29D45285A483D0027220C /* OwnerCardTextFieldView.swift */,
-				2EB29D47285A48820027220C /* CardNumberTextFieldView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -536,7 +533,6 @@
 				2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */,
 				2EB29D342859A9E00027220C /* CalculyatorAssembly.swift in Sources */,
 				2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */,
-				2EB29D48285A48820027220C /* CardNumberTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -660,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -677,7 +673,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3VJYN6Z9BM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileBankingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -705,7 +701,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3VJYN6Z9BM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MobileBankingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -93,6 +93,7 @@ class  OwnerCardTextFieldView: UIView {
         super.init(frame: .zero)
         self.setupUI()
         self.configureView(with: settings)
+        self.textField.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -121,5 +122,18 @@ private extension OwnerCardTextFieldView {
             make.leading.trailing.bottom.equalToSuperview()
             
         }
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension OwnerCardTextFieldView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
 }

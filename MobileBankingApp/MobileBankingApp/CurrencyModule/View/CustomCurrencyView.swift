@@ -176,6 +176,11 @@ extension CustomCurrencyView: UITextFieldDelegate {
         textField.text = ""
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
+    }
+    
     /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("tf:", textField.text ?? "")
         searchTextField.resignFirstResponder()
