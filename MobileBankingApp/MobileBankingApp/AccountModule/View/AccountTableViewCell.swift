@@ -27,6 +27,9 @@ final class AccountTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = AppFonts.medium17.font
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.3
+        label.numberOfLines = 0
         label.textAlignment = .left
         return label
     }()
@@ -61,6 +64,7 @@ private extension AccountTableViewCell {
         self.cellLabel.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(5)
             make.leading.equalTo(self.accountCellViewImageView.snp.trailing).offset(10)
+            make.trailing.equalToSuperview().offset(16)
             make.centerY.equalToSuperview().priority(.high)
         }
     }

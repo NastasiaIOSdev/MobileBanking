@@ -118,7 +118,8 @@ private extension CustomNewCardView {
         self.cardView.addSubview(self.customCardViewImage)
         self.customCardViewImage.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
-            make.leading.equalToSuperview()
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
         
         self.customCardViewImage.addSubview(self.customCardView)
