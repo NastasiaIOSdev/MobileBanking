@@ -162,7 +162,11 @@ extension CustomMainView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Нажата ячейка под индексом - \(indexPath.row)")
     }
-    
+}
+
+// MARK: - Animation
+
+extension CustomMainView {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {

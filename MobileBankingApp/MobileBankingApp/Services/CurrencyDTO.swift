@@ -18,22 +18,21 @@ struct CurrencyDTO: Codable {
 
 struct Valutes: Codable {
    
-    let usd, eur, cad, dkk, nok, chf, cny, jpy, sek, sgd: Valute?
+    let eur, chf, usd, cad, bgn, byn, pln, ron, brl : Valute?
     var all: [Valute?] {
-        [usd, eur, cad, dkk, nok, chf, cny, jpy, sek, sgd]
+        [eur, chf, usd, cad, bgn, byn, pln, ron, brl]
     }
     
     enum CodingKeys: String, CodingKey {
-        case usd = "USD"
         case eur = "EUR"
-        case cad = "CAD"
-        case dkk = "DKK"
-        case nok = "NOK"
         case chf = "CHF"
-        case cny = "CNY"
-        case jpy = "JPY"
-        case sek = "SEK"
-        case sgd = "SGD"
+        case usd = "USD"
+        case cad = "CAD"
+        case bgn = "BGN"
+        case byn = "BYN"
+        case pln = "PLN"
+        case ron = "RON"
+        case brl = "BRL"
     }
 }
 

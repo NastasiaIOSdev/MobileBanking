@@ -32,13 +32,12 @@ final class CurrencyTableViewCell: UITableViewCell {
             charCodeLabel.text = model.charCode
             valueLabel.text = model.value
             nameLabel.text = model.name
-            //currenyImageView.image = cell.imageFlag
-            //nameLabel.text = cell.name
+            currencyImageView.image = UIImage(named: model.charCode ?? "")
         }
     }
     
     private let cellView = UIView()
-    private let currenyImageView = UIImageView()
+    private let currencyImageView = UIImageView()
     let charCodeLabel = UILabel()
     let nameLabel = UILabel()
     let valueLabel = UILabel()
@@ -69,9 +68,9 @@ private extension CurrencyTableViewCell {
     func setupCommonData() {
         self.cellView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.currenyImageView.clipsToBounds = true
-        self.currenyImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.currenyImageView.contentMode = .scaleAspectFit
+        self.currencyImageView.clipsToBounds = true
+        self.currencyImageView.translatesAutoresizingMaskIntoConstraints = false
+        self.currencyImageView.contentMode = .scaleAspectFit
         
         self.charCodeLabel.font = AppFonts.medium17.font
         self.charCodeLabel.textColor = .black
@@ -101,23 +100,23 @@ private extension CurrencyTableViewCell {
             make.trailing.equalToSuperview().offset(Constraints.trailingOfset)
         }
         
-        self.cellView.addSubview(self.currenyImageView)
-        self.currenyImageView.snp.makeConstraints { make in
+        self.cellView.addSubview(self.currencyImageView)
+        self.currencyImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.height.equalTo(Constants.heightImageView)
-            make.width.equalTo(self.currenyImageView.snp.height)
+            make.width.equalTo(self.currencyImageView.snp.height)
             make.leading.equalToSuperview()
         }
         
         self.cellView.addSubview(self.charCodeLabel)
         self.charCodeLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(Constraints.charCodeLabelImageViewTopBottomInset)
-            make.leading.equalTo(self.currenyImageView.snp.trailing).offset(Constraints.charCodeLabelLeadingOffset)
+            make.leading.equalTo(self.currencyImageView.snp.trailing).offset(Constraints.charCodeLabelLeadingOffset)
         }
         
         self.cellView.addSubview(self.nameLabel)
         self.nameLabel.snp.makeConstraints { make in
-            make.leading.equalTo(self.currenyImageView.snp.trailing).offset(Constraints.charCodeLabelLeadingOffset)
+            make.leading.equalTo(self.currencyImageView.snp.trailing).offset(Constraints.charCodeLabelLeadingOffset)
             make.bottom.equalToSuperview().inset(Constraints.charCodeLabelImageViewTopBottomInset)
         }
         

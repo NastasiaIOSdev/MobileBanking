@@ -149,6 +149,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA55E4928645EDD004D6BC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */,
+				2EB29D2C28599F200027220C /* CurrencyModel.swift */,
+				2EB29D3C2859F96E0027220C /* AccountCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2EA59D3D285F4801008EF7BE /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		2EA59D7928625A54008EF7BE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */,
 				2EA59D84286369ED008EF7BE /* CoreData */,
 				2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */,
 				2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */,
@@ -237,18 +248,18 @@
 		2ECAC2AA284F44B400320A1E /* MobileBankingApp */ = {
 			isa = PBXGroup;
 			children = (
-				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
-				2EA59D7928625A54008EF7BE /* Services */,
+				2EA55E4928645EDD004D6BC4 /* Models */,
 				2ECAC2C3284F46FA00320A1E /* Tabbar */,
 				2EA59D3D285F4801008EF7BE /* LoginModule */,
 				2ECAC2C0284F468B00320A1E /* MainModule */,
 				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 				2ECAC2C1284F46BC00320A1E /* CurrencyModule */,
 				2ECAC2C2284F46CA00320A1E /* AccountModule */,
+				2EA59D7928625A54008EF7BE /* Services */,
 				2EB29D3B2859D09E0027220C /* Converter */,
 				2ECAC2BF284F467E00320A1E /* Design */,
+				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
 				2ECAC2B9284F44B800320A1E /* Info.plist */,
-				2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */,
 			);
 			path = MobileBankingApp;
 			sourceTree = "<group>";
@@ -271,7 +282,6 @@
 				2ECAC2D6284F5CE000320A1E /* MainAssembly.swift */,
 				2E9F4921285BA7120024D7C4 /* MainPresenter.swift */,
 				2E9F4930285CD7750024D7C4 /* MainRouter.swift */,
-				2ECAC2F2284FA8C800320A1E /* Models */,
 				2ECAC2E2284F693E00320A1E /* View */,
 			);
 			path = MainModule;
@@ -281,7 +291,6 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2D8284F5D0200320A1E /* CurrencyAssemly.swift */,
-				2EB29D2C28599F200027220C /* CurrencyModel.swift */,
 				2E9F491B285B80040024D7C4 /* CurrencyPresenter.swift */,
 				2ECAC2E3284F694B00320A1E /* View */,
 			);
@@ -292,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				2ECAC2DA284F5D1300320A1E /* AccountAssembly.swift */,
-				2EB29D3C2859F96E0027220C /* AccountCellModel.swift */,
 				2EA59D49285F7C59008EF7BE /* AccountRouter.swift */,
 				2E9F4915285B684A0024D7C4 /* AccountPresenter.swift */,
 				2ECAC2E4284F695B00320A1E /* View */,
@@ -382,14 +390,6 @@
 				2EB29D42285A11D00027220C /* View */,
 			);
 			path = NewCardModule;
-			sourceTree = "<group>";
-		};
-		2ECAC2F2284FA8C800320A1E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				2ECAC2F3284FA8E900320A1E /* PaymentsCellModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		2ECAC2F7284FAFF200320A1E /* Cell */ = {

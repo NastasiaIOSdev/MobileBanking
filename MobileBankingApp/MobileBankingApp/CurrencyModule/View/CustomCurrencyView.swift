@@ -23,6 +23,10 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
         }
     }
     
+    var filteredCurrencies = [CurrencyModel]()
+    
+    var searching = false
+    
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
         label: Texts.pageLabelText,
         font: .bold34,
@@ -32,7 +36,7 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
             self.calcButtonTapActionhandler?()
         }))
     
-    private let searchTextField = UISearchTextField()
+    private lazy var searchTextField = UISearchTextField()
     
     private let currencyDateLabel = CurrencyDateView(settings: .init(
         label: Texts.currencyDateLabelText,
@@ -66,11 +70,28 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
         self.backgroundColor = Colors.backgroundGray.value
         self.setupUI()
         self.setupSearchField()
+        searchTextField.delegate = self
+        self.searchTextField.addTarget(self, action: #selector(self.searchValute), for: .editingChanged)
     }
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    @objc func searchValute() {
+        
+        self.filteredCurrencies.removeAll()
+        
+        guard let toSearch = searchTextField.text else { return }
+        
+        searching = toSearch.count != 0
+        
+        filteredCurrencies = searching ?
+        currencies.filter({ ($0.name ?? "").lowercased().contains(toSearch.lowercased()) || ($0.charCode ?? "").lowercased().contains(toSearch.lowercased()) }) : currencies
+        
+        tableView.reloadData()
     }
 }
 
@@ -127,19 +148,39 @@ private extension CustomCurrencyView {
 // MARK: - TableView DataSource & Delegate
 
 extension CustomCurrencyView: UITableViewDataSource, UITableViewDelegate {
+    
+    var actualCurrencies: [CurrencyModel] {
+        searching ? filteredCurrencies : currencies
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currencies.count
+        actualCurrencies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CurrencyTableViewCell.identifier, for: indexPath) as? CurrencyTableViewCell else { return UITableViewCell()}
-        cell.model = currencies[indexPath.row]
+        cell.model = actualCurrencies[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Нажата ячека под индексом:\(indexPath.row)")
     }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension CustomCurrencyView: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("tf:", textField.text ?? "")
+        searchTextField.resignFirstResponder()
+        return true
+    }*/
 }
 
 // MARK: - Constants, Texts, Constrants
