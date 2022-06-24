@@ -12,13 +12,19 @@ protocol INewCardPresenter: AnyObject {
 }
 
 final class NewCardPresenter: INewCardPresenter {
+
+// MARK: - Property
     
     weak var ui: ICustomNewCardView?
     private let router: INewCardRouter
+
+// MARK: - Init
     
     init(router: INewCardRouter) {
         self.router = router
     }
+
+// MARK: - viewDidLoad
     
     func viewDidLoad(ui: ICustomNewCardView) {
         self.ui = ui

@@ -10,29 +10,20 @@ import SnapKit
 
 final class CardCollectionViewCell: UICollectionViewCell {
     
+// MARK: - Property
+    
     static let identifier = "CardCollectionViewCell"
-    
-    private enum Constants {
-        static let nameImageView = "card"
-        static let cardTypeImage = "icons8-visa"
-    }
-    
-    private enum Constraints {
-        static let imageTopInset: CGFloat = 27
-        static let imageBottomInset: CGFloat = 29
-        static let imageLeadingInset: CGFloat = 48
-        static let imageTrailingInset: CGFloat = 43
-    }
-    
     private let cellView = UIView()
     private let imageView = UIImageView()
     private lazy var cardView = CardView(settings: .init(
-        cardNumberLabel: "* * * * * * * * * * * * 3498",
-        expareDateLabel: "Expiry Date",
-        expareDateNumbersLabel: "05/23",
-        typeCardImage: Constants.cardTypeImage,
-        availableBalanceLabel: "Available\nBalance",
-        balanceLabel: "3033 RUB"))
+        cardNumberLabel: Texts.cardViewCardNumberLabelText,
+        expareDateLabel: Texts.cardViewExpareDateLabelText,
+        expareDateNumbersLabel: Texts.cardViewExpareDateNumbersLabel,
+        typeCardImage: Texts.cardTypeImage,
+        availableBalanceLabel: Texts.cardViewAvailableBalanceLabel,
+        balanceLabel: Texts.cardViewBalanceLabel))
+
+// MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,11 +33,16 @@ final class CardCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+//MARK: - layout Subviews
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.setupUI()
     }
 }
+
+// MARK: - Setup Layout & CommonData
 
 private extension CardCollectionViewCell {
     func setupUI() {
@@ -59,7 +55,7 @@ private extension CardCollectionViewCell {
         
         self.imageView.clipsToBounds = true
         self.imageView.contentMode = .scaleAspectFill
-        self.imageView.image = UIImage(named: Constants.nameImageView)
+        self.imageView.image = UIImage(named: Texts.nameImageView)
     }
     
     func setupLayout() {
@@ -85,5 +81,27 @@ private extension CardCollectionViewCell {
             make.leading.equalTo(self.imageView.snp.leading).inset(Constraints.imageLeadingInset)
             make.trailing.equalTo(self.imageView.snp.trailing).inset(Constraints.imageTrailingInset)
         }
+    }
+}
+
+// MARK: - Constraints, Texts
+
+private extension CardCollectionViewCell {
+    
+    private enum Texts {
+        static let nameImageView = "card"
+        static let cardTypeImage = "icons8-visa"
+        static let cardViewCardNumberLabelText = "* * * * * * * * * * * * 3498"
+        static let cardViewExpareDateLabelText = "Expiry Date"
+        static let cardViewExpareDateNumbersLabel = "05/23"
+        static let cardViewAvailableBalanceLabel = "Available\nBalance"
+        static let cardViewBalanceLabel = "3033 RUB"
+    }
+    
+    private enum Constraints {
+        static let imageTopInset: CGFloat = 27
+        static let imageBottomInset: CGFloat = 29
+        static let imageLeadingInset: CGFloat = 48
+        static let imageTrailingInset: CGFloat = 43
     }
 }

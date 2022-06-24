@@ -8,8 +8,10 @@
 import UIKit
 
 final class CardCell: UICollectionViewCell {
-    
+
     static let identifier = "CardCell"
+
+//MARK: - Constancts
     
     private enum Constants {
         static let itemsPerRow: CGFloat = 1
@@ -34,6 +36,8 @@ final class CardCell: UICollectionViewCell {
             forCellWithReuseIdentifier: CardCollectionViewCell.identifier)
         return collectionView
     }()
+
+// MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,6 +50,8 @@ final class CardCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - setupLayout
 
 private extension CardCell {
     func setupLayout() {

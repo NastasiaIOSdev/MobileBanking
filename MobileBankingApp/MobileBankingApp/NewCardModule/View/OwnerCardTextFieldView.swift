@@ -8,8 +8,10 @@
 import UIKit
 import SnapKit
 
-class  OwnerCardTextFieldView: UIView {
+final class  OwnerCardTextFieldView: UIView {
 
+// MARK: - Settings
+    
     struct Setting {
         let header: String
         let value: String?
@@ -19,7 +21,8 @@ class  OwnerCardTextFieldView: UIView {
             self.value = value
         }
     }
-// MARK: - Constraints, Constant
+    
+// MARK: - Constraints, Constant, Texts
     
     private enum Constants {
         
@@ -33,7 +36,7 @@ class  OwnerCardTextFieldView: UIView {
     }
     
     private enum Texts {
-        static let textFieldPlaceHolderText = "Ivanov Ivan"
+        static let textFieldPlaceHolderText = "type here..."
     }
 
 // MARK: - Property

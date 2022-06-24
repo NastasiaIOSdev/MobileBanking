@@ -7,17 +7,17 @@
 
 import Foundation
 
-protocol INetworkService: AnyObject {
+protocol INetworkManager: AnyObject {
     func loadCurrencyData<T: Decodable>(completion: @escaping (Result<T, Error>)->())
 }
 
-final class NetworkService {
+final class NetworkManager {
     enum EndPoints {
         static let currencyUrl = "http://www.cbr-xml-daily.ru/daily_json.js"
     }
 }
 
-extension NetworkService: INetworkService {
+extension NetworkManager: INetworkManager {
     func loadCurrencyData<T: Decodable>(completion: @escaping (Result<T, Error>)->()) {
         guard let url = URL(string: EndPoints.currencyUrl) else { assert(false) }
         let reuqest = URLRequest(url: url)

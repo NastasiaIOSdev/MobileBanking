@@ -23,7 +23,3 @@ extension LoginRouter: ILoginRouter {
         self.vc?.present(vc, animated: true)
     }
 }
-
-//        let vc = TabbarAssembly.build()
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true)

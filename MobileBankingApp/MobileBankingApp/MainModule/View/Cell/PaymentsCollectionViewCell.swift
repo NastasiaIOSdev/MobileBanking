@@ -7,9 +7,9 @@
 
 import UIKit
 
-class PaymentsCollectionViewCell: UICollectionViewCell {
-    
-    static let identifier = "PaymentsCollectionViewCell"
+final class PaymentsCollectionViewCell: UICollectionViewCell {
+
+// MARK: - Constants, Constraints
     
     private enum Constants {
         static let viewCornerRadius: CGFloat = 10
@@ -23,6 +23,9 @@ class PaymentsCollectionViewCell: UICollectionViewCell {
         static let nameLabelTopOffset = 6
     }
     
+// MARK: - Property
+    
+    static let identifier = "PaymentsCollectionViewCell"
     private let cellView = UIView()
     private let cellViewInside = UIView()
     private let imageView = UIImageView()
@@ -37,6 +40,8 @@ class PaymentsCollectionViewCell: UICollectionViewCell {
         }
     }
     
+// MARK: - Init
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -44,12 +49,16 @@ class PaymentsCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+// MARK: - layoutSubviews
     
     override func layoutSubviews() {
         super.layoutSubviews()
         self.setupUI()
     }
 }
+
+// MARK: - setup CommonData
 
 private extension PaymentsCollectionViewCell {
     func setupUI() {
@@ -88,7 +97,11 @@ private extension PaymentsCollectionViewCell {
         self.nameLabel.adjustsFontSizeToFitWidth = true
         self.nameLabel.minimumScaleFactor = Constants.labelScaleFactor
     }
-    
+}
+
+// MARK: - setup Layout
+
+private extension PaymentsCollectionViewCell {
     func setupLayout() {
         self.addSubview(self.cellView)
         self.cellView.snp.makeConstraints { make in

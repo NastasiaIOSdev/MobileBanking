@@ -100,6 +100,7 @@ private extension CustomMainView {
 // MARK: - CollectionView DelegateFlowLayout
 
 extension CustomMainView:  UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
             return CGSize(
@@ -110,6 +111,7 @@ extension CustomMainView:  UICollectionViewDelegateFlowLayout {
             width: frame.width,
             height: Constant.heightSectionCellCard)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 1 {
             return UIEdgeInsets(

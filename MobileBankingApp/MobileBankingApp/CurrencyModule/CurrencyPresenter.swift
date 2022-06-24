@@ -12,11 +12,16 @@ protocol ICurrencyPresenter: AnyObject {
 }
 
 final class CurrencyPresenter: ICurrencyPresenter {
+
+// MARK: - Propety
+    
     weak var ui: ICustomCurrencyView?
     private var currencies: [CurrencyModel]?
-    private var networkservice = NetworkService()
+    private var networkservice = NetworkManager()
     private var currencyDTOModel: CurrencyDTO?
     private var coreDataManager = CoreDataManager.shared
+
+// MARK: - Init
     
     init() {
         currencies = []
@@ -27,6 +32,8 @@ final class CurrencyPresenter: ICurrencyPresenter {
         self.currencies = currencies
     }
 
+// MARK: - viewDidLoad
+    
     func viewDidLoad(ui: ICustomCurrencyView, completion: @escaping ([CurrencyModel]) -> Void) {
         
         self.ui = ui
@@ -39,6 +46,8 @@ final class CurrencyPresenter: ICurrencyPresenter {
     }
 }
 
+// MARK: - FetchDataFromNetworkService
+
 private extension CurrencyPresenter {
     func fetchDataFromNetworkService(completion: @escaping () -> Void) {
         self.networkservice.loadCurrencyData { (result: Result<CurrencyDTO, Error>) in
@@ -47,14 +56,12 @@ private extension CurrencyPresenter {
                 DispatchQueue.main.async {
                     
                     var newCurrencies = [CurrencyModel]()
-                    
                     guard let valutes = model.valutes else { return }
                     for valute in valutes.all {
                         guard let valute = valute else { return }
                         let currency = CurrencyModel(withResponseDataValute: valute)
                         newCurrencies.append(currency)
                     }
-                    
                     self.coreDataManager.save(newCurrencies)
                     self.currencies = newCurrencies
                     

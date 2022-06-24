@@ -52,6 +52,8 @@ final class  MainGreetingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+//MARK: - Metod configureView
+    
     func configureView(with setting: Settings) {
         self.imageView.image = UIImage(named: setting.image)
         self.greetingLabel.text = setting.greeting

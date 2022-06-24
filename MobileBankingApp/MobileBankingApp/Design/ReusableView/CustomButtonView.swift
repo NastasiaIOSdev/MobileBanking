@@ -9,35 +9,42 @@ import Foundation
 import UIKit
 
 final class CustomButtonView: UIView {
+ 
+// MARK: - Settings
     
     struct Settings {
         let labelText: String
         let font: AppFonts
         let tapHandler: () -> Void
     }
-    
-    private enum Constants {
-        
-    }
+
+// MARK: - Constraints
     
     private enum Constraints {
-        
+        static let buttonLabelTopInset: CGFloat = 17
+        static let buttonLabelLeadingOffset: CGFloat = 16
     }
+
+// MARK: - Property
     
     private let tapHandler: () -> Void
     private let buttonLabel = UILabel()
+
+// MARK: - Init
     
     init(settings: Settings) {
         self.tapHandler = settings.tapHandler
         super.init(frame: .zero)
         self.setupUI()
-        self.configure(with: settings)
+        self.configureView(with: settings)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - Setup Layout & CommonData
 
 private extension CustomButtonView {
     func setupUI() {
@@ -49,13 +56,17 @@ private extension CustomButtonView {
         
         self.addSubview(self.buttonLabel)
         self.buttonLabel.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview().inset(17)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
+            make.top.bottom.equalToSuperview().inset(Constraints.buttonLabelTopInset)
+            make.leading.equalToSuperview().offset(Constraints.buttonLabelLeadingOffset)
+            make.trailing.equalToSuperview().offset(-Constraints.buttonLabelLeadingOffset)
         }
     }
-    
-    func configure(with settings: Settings) {
+}
+
+// MARK: - Metod convigureView
+
+private extension CustomButtonView {
+    func configureView(with settings: Settings) {
         self.buttonLabel.text = settings.labelText
         self.buttonLabel.font = settings.font.font
         

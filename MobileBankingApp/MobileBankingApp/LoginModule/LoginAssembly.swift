@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum  LoginAssembly {
+enum LoginAssembly {
     static func build() -> LoginViewController {
         let router = LoginRouter()
         let presenter = LoginPresenter(router: router)

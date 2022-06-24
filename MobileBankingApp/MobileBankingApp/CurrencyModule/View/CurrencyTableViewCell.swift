@@ -35,12 +35,13 @@ final class CurrencyTableViewCell: UITableViewCell {
             currencyImageView.image = UIImage(named: model.charCode ?? "")
         }
     }
+    private let charCodeLabel = UILabel()
+    private let nameLabel = UILabel()
+    private let valueLabel = UILabel()
     
     private let cellView = UIView()
     private let currencyImageView = UIImageView()
-    let charCodeLabel = UILabel()
-    let nameLabel = UILabel()
-    let valueLabel = UILabel()
+    
     
 // MARK: - Init
     

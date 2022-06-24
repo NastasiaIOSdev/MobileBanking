@@ -13,6 +13,8 @@ protocol ICustomAccountView: AnyObject {
 }
 
 final class CustomAccountView: UIView, ICustomAccountView  {
+
+// MARK: - Constants, Constraints, Texts
     
     private enum Constants {
         static let pageLabelImage = "logout"
@@ -33,6 +35,7 @@ final class CustomAccountView: UIView, ICustomAccountView  {
     }
     
 // MARK: - Properties
+    var logoutButtonTapActionHandler: (() -> ())?
     
     private var itemCell: [AccountCellModel] = accountDataArray
     private let tableView = UITableView()
@@ -46,8 +49,6 @@ final class CustomAccountView: UIView, ICustomAccountView  {
             self.logoutButtonTapActionHandler?()
         })
     )
-    
-    var logoutButtonTapActionHandler: (() -> ())?
     
     private let accountImage: UIImageView = {
         let image = UIImageView()
@@ -64,6 +65,8 @@ final class CustomAccountView: UIView, ICustomAccountView  {
         label.textAlignment = .center
         return label
     }()
+
+// MARK: - Init
     
     init() {
         super.init(frame: .zero)
@@ -145,4 +148,3 @@ extension CustomAccountView: UITableViewDataSource, UITableViewDelegate {
         print("Нажата ячека под индексом:\(indexPath.row)")
     }
 }
-

@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Currency {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Currency> {
@@ -19,7 +18,6 @@ extension Currency {
     @NSManaged public var code: String?
     @NSManaged public var value: Double
     @NSManaged public var name: String?
-
 }
 
 extension Currency : Identifiable {

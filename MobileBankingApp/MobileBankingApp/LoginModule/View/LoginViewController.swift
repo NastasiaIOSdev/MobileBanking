@@ -7,10 +7,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
+// MARK: - Property
+    
     private var ui = CustomLoginView()
     private var presenter: ILoginPresenter?
+
+// MARK: - Init
     
     init(presenter: ILoginPresenter) {
         super.init(nibName: nil, bundle: nil)
@@ -21,10 +25,13 @@ class LoginViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+// MARK: - loadView
     
     override func loadView() {
         self.view = self.ui
     }
+ // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,10 @@
 import UIKit
 import SnapKit
 
-class BigLabelButtonView: UIView {
+final class BigLabelButtonView: UIView {
+
+// MARK: - Settings
+    
     struct Setting {
         let label: String
         let font: AppFonts
@@ -16,15 +19,21 @@ class BigLabelButtonView: UIView {
         let color: Colors
         let tapHandler: () -> Void
     }
+
+// MARK: - Constraints
     
     private enum Constraints {
        static let imageInsert = 10
        static let imageHeight = 24
     }
+
+// MARK: - Property
     
     private let imageView = UIImageView()
     private let pageMainLabel = UILabel()
     private let tapHandler: () -> Void
+ 
+// MARK: - Init
     
     init(settings: Setting) {
         self.tapHandler = settings.tapHandler
@@ -36,6 +45,8 @@ class BigLabelButtonView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+// MARK: - Metod configureView
     
     func configureView(with settings: Setting) {
         self.imageView.image = UIImage(named: settings.image)
@@ -52,6 +63,8 @@ class BigLabelButtonView: UIView {
         self.tapHandler()
     }
 }
+
+// MARK: - Setup Layout & CommonData
 
 private extension BigLabelButtonView {
     func setupUI() {

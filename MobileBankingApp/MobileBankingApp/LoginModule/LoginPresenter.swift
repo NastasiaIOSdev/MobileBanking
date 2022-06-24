@@ -12,13 +12,19 @@ protocol ILoginPresenter: AnyObject {
 }
 
 final class LoginPresenter: ILoginPresenter {
-   
+
+// MARK: - Property
+    
     weak var ui: ICustomLoginView?
     private let router: ILoginRouter
+
+// MARK: - Init
     
     init(router: ILoginRouter) {
         self.router = router
     }
+
+// MARK: - viewDidLoad
     
     func viewDidLoad(ui: ICustomLoginView) {
         self.ui = ui

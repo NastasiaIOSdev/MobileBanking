@@ -7,12 +7,14 @@
 
 import UIKit
 
-class NewCardViewController: UIViewController {
+final class NewCardViewController: UIViewController {
+
+// MARK: - Property
     
     private var ui = CustomNewCardView()
     private var presenter: INewCardPresenter?
     
-    // MARK: - Init
+// MARK: - Init
     
     init(presenter: INewCardPresenter) {
         super.init(nibName: nil, bundle: nil)
@@ -22,11 +24,14 @@ class NewCardViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+// MARK: - loadView
     
     override func loadView() {
         self.view = self.ui
     }
-    // MARK: - Life Cycles
+    
+// MARK: - Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -13,7 +13,7 @@ protocol ICustomCurrencyView: AnyObject {
 
 final class CustomCurrencyView: UIView, ICustomCurrencyView {
   
-    //MARK: - Property
+//MARK: - Property
     
     var calcButtonTapActionhandler: (() -> ())?
     
@@ -25,7 +25,7 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
     
     var filteredCurrencies = [CurrencyModel]()
     
-    var searching = false
+    private var searching = false
     
     private lazy var pageLabel = BigLabelButtonView(settings: .init(
         label: Texts.pageLabelText,
@@ -44,7 +44,7 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
     
     private let tableView = UITableView()
     
-    // MARK: - Setup SearchTF
+// MARK: - Setup SearchTF
     
     func setupSearchField() {
         self.searchTextField.backgroundColor = Colors.searchBarGray.value
@@ -63,7 +63,7 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
         self.searchTextField.rightView = emptyView
     }
     
-    // MARK: - Init
+// MARK: - Init
     
     init() {
         super.init(frame: .zero)
@@ -79,6 +79,7 @@ final class CustomCurrencyView: UIView, ICustomCurrencyView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Metod searchValute
     
     @objc func searchValute() {
         
@@ -154,7 +155,7 @@ extension CustomCurrencyView: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        actualCurrencies.count
+        return actualCurrencies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -180,12 +181,6 @@ extension CustomCurrencyView: UITextFieldDelegate {
         self.endEditing(true)
         return false
     }
-    
-    /*func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("tf:", textField.text ?? "")
-        searchTextField.resignFirstResponder()
-        return true
-    }*/
 }
 
 // MARK: - Constants, Texts, Constrants

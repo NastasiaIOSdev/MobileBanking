@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalculyatorViewController: UIViewController {
+final class CalculyatorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

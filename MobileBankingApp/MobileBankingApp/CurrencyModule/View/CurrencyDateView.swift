@@ -36,6 +36,8 @@ final class CurrencyDateView: UIView {
     }
 }
 
+// MARK: - Setup CommonData & LAyout, Metod configureView
+
 private extension CurrencyDateView {
     func configureView(with settings: Settings) {
         self.currencyLabel.text = settings.label

@@ -12,14 +12,22 @@ protocol IMainPresenter: AnyObject {
 }
 
 final class MainPresenter: IMainPresenter {
+
+//MARK: - Property
+    
+    var model: PaymentsCellModel?
     
     weak var ui: ICustomMainView?
-    var model: PaymentsCellModel?
+    
     private let router: IMainRouter
+
+//MARK: - Init
     
     init(router: IMainRouter) {
         self.router = router
     }
+
+//MARK: - Life cycles
     
     func viewDidload(ui: ICustomMainView) {
         self.ui = ui

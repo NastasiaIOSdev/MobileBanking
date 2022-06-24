@@ -13,13 +13,19 @@ protocol IAccountPresenter: AnyObject {
 
 final class AccountPresenter: IAccountPresenter {
 
+//MARK: - Property
+    
     weak var ui: ICustomAccountView?
     var model: AccountCellModel?
     private let router: IAccountRouter
+
+//MARK: - Init
     
     init(router: IAccountRouter) {
         self.router = router
     }
+
+//MARK: - viewDidLoad
     
     func viewDidLoad(ui: ICustomAccountView) {
         self.ui = ui

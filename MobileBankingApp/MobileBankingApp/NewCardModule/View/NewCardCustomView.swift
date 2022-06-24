@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class  NewCardCustomView: UIView {
+final class  NewCardCustomView: UIView {
 
 // MARK: - View Settings
     
@@ -78,6 +78,8 @@ class  NewCardCustomView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Metod configureView
+    
     func configureView(with settings: Settings) {
         self.cardLabel.text = settings.cardNumberLabel
         self.expDateLabel.text = settings.expareDateLabel
@@ -90,7 +92,7 @@ class  NewCardCustomView: UIView {
     }
 }
 
-// MARK: - CommonData
+// MARK: - Setup CommonData
 
 private extension NewCardCustomView {
     func setupUI() {
@@ -157,7 +159,7 @@ private extension NewCardCustomView {
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup Layout
 
 private extension NewCardCustomView {
     

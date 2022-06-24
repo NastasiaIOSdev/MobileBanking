@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 final class  CardView: UIView {
+
+//MARK: - Constraints
     
     private enum Constraints {
         static let cardLabelLeadingOffset: CGFloat = 7
@@ -18,6 +20,8 @@ final class  CardView: UIView {
         static let avBalanceLabelTopOffset: CGFloat = 25
         static let balanceLabelTopOffset: CGFloat = 8
     }
+
+//MARK: - Settings
     
     struct Settings {
         let cardNumberLabel: String
@@ -59,7 +63,9 @@ final class  CardView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
+//MARK: - Metod configureView
+    
     func configureView(with settings: Settings) {
         self.cardLabel.text = settings.cardNumberLabel
         self.expDateLabel.text = settings.expareDateLabel

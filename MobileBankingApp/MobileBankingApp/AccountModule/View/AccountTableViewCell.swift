@@ -48,6 +48,8 @@ final class AccountTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Setup Layout & CommonData
+
 private extension AccountTableViewCell {
     func setupUI() {
         self.accountCellViewImageView.tintColor = Colors.redColor.value

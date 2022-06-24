@@ -27,7 +27,7 @@
 		2EA59D4A285F7C59008EF7BE /* AccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D49285F7C59008EF7BE /* AccountRouter.swift */; };
 		2EA59D55286259AE008EF7BE /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */; };
 		2EA59D7B2862E625008EF7BE /* CurrencyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */; };
-		2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */; };
+		2EA59D7D2862EA6C008EF7BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D7C2862EA6C008EF7BE /* NetworkManager.swift */; };
 		2EA59D8328634E2F008EF7BE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */; };
 		2EB29D2128590BA90027220C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EB29D2028590BA90027220C /* SnapKit */; };
 		2EB29D2D28599F200027220C /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB29D2C28599F200027220C /* CurrencyModel.swift */; };
@@ -91,7 +91,7 @@
 		2EA59D49285F7C59008EF7BE /* AccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRouter.swift; sourceTree = "<group>"; };
 		2EA59D54286259AE008EF7BE /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDTO.swift; sourceTree = "<group>"; };
-		2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2EA59D7C2862EA6C008EF7BE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		2EB29D2C28599F200027220C /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		2EB29D302859A9950027220C /* CalculyatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculyatorViewController.swift; sourceTree = "<group>"; };
@@ -177,16 +177,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2EA59D7928625A54008EF7BE /* Services */ = {
+		2EA59D7928625A54008EF7BE /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
 				2EA59D53286259AE008EF7BE /* Data.xcdatamodeld */,
+				2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */,
+				2EA59D7C2862EA6C008EF7BE /* NetworkManager.swift */,
 				2EA59D84286369ED008EF7BE /* CoreData */,
 				2EA59D7A2862E625008EF7BE /* CurrencyDTO.swift */,
-				2EA59D8228634E2F008EF7BE /* CoreDataManager.swift */,
-				2EA59D7C2862EA6C008EF7BE /* NetworkService.swift */,
 			);
-			path = Services;
+			path = DataManagers;
 			sourceTree = "<group>";
 		};
 		2EA59D84286369ED008EF7BE /* CoreData */ = {
@@ -252,7 +252,7 @@
 				2ECAC2F1284FA81A00320A1E /* NewCardModule */,
 				2ECAC2C1284F46BC00320A1E /* CurrencyModule */,
 				2ECAC2C2284F46CA00320A1E /* AccountModule */,
-				2EA59D7928625A54008EF7BE /* Services */,
+				2EA59D7928625A54008EF7BE /* DataManagers */,
 				2EB29D3B2859D09E0027220C /* Converter */,
 				2ECAC2BF284F467E00320A1E /* Design */,
 				2ECAC2C4284F4D4800320A1E /* SupportingFiles */,
@@ -532,7 +532,7 @@
 				2EA59D7B2862E625008EF7BE /* CurrencyDTO.swift in Sources */,
 				2ECAC2F9284FB05100320A1E /* CardCell.swift in Sources */,
 				2EB29D342859A9E00027220C /* CalculyatorAssembly.swift in Sources */,
-				2EA59D7D2862EA6C008EF7BE /* NetworkService.swift in Sources */,
+				2EA59D7D2862EA6C008EF7BE /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -656,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
