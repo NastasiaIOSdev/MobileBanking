@@ -4,6 +4,6 @@
 
 - MVP + Router
 - UIKit
-- SnapKit
+- SnapKit / project without a storyboard
 - CoreData
 - URLSession
