@@ -1,6 +1,6 @@
 # MobileBanking
 
-Анастасия Ларина, учебный проект, SHIFT
+Анастасия, учебный проект, SHIFT
 
 - MVP + Router
 - UIKit
