@@ -2,7 +2,7 @@
 
 Анастасия Ларина, учебный проект, SHIFT
 
-- MVP
+- MVP + Router
 - UIKit
 - SnapKit
 - CoreData
