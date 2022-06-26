@@ -7,3 +7,4 @@
 - SnapKit / project without a storyboard
 - CoreData
 - URLSession
+- Designed according to the project in Figma
